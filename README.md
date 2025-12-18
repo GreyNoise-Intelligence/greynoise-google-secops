@@ -1,33 +1,38 @@
-[![main](https://github.com/GreyNoise-Intelligence/os-template/workflows/Build/badge.svg)](https://github.com/GreyNoise-Intelligence/os-template/actions?query=workflow%3ABuild)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# GreyNoise Open-Source Template
+# GreyNoise Intelligence - Google SecOps Integration
 
-The GreyNoise OS template is used to create new open source repos. It contains standards we've set as a team at GreyNoise.
-Please feel free to add/modify as needed for specific languages/tools.
+This repository contains the Google SecOps components for the GreyNoise Intelligence integration, including SIEM dashboards, saved searches, detection rules, and SOAR playbooks for comprehensive threat intelligence visualization, investigation, and automated response.
 
-## Usage 
+---
 
-Insert details about usage of your tool, example are very helpful. 
+# Google SecOps
 
- ## Contributing
+## SIEM Integration
+
+### Repository Contents
+
+| Component           | Description                                               | Path                                                                                 |
+| ------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| **Detection Rules** | YARA-L rules for automated threat detection               | [`Google SecOps SIEM/Detection Rules/`](./Google%20SecOps%20SIEM/Detection%20Rules/) |
+| **Saved Searches**  | Predefined UDM queries for indicator investigation        | [`Google SecOps SIEM/Saved Searches/`](./Google%20SecOps%20SIEM/Saved%20Searches/)   |
+| **Dashboards**      | Interactive dashboards for threat intelligence monitoring | [`Google SecOps SIEM/Dashboards/`](./Google%20SecOps%20SIEM/Dashboards/)             |
+
+> 📖 For detailed SIEM Integration Information, see the [Google SecOps SIEM](./Google%20SecOps%20SIEM/README.md).
+
+## SOAR Integration
+
+*SOAR integration content coming soon.*
+
+---
+
+## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/GreyNoise-Intelligence/os-template/tags).
-
-## Authors
-
-* **Your Name** - *Initial work* - [Your Github Handle](https://github.com/github-handle)
-
-See also the list of [contributors](https://github.com/GreyNoise-Intelligence/os-template/contributors) who participated in this project.
-
-## Acknowledgments
-
-* Person (https://github.com/github-handle) - reason
-
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/GreyNoise-Intelligence/greynoise-google-secops/tags).
 
 ## Links
 
@@ -37,9 +42,8 @@ See also the list of [contributors](https://github.com/GreyNoise-Intelligence/os
 
 ## Contact Us
 
-Have any questions or comments about GreyNoise?  Contact us at [hello@greynoise.io](mailto:hello@greynoise.io)
+Have any questions or comments about GreyNoise? Contact us at [hello@greynoise.io](mailto:hello@greynoise.io)
 
 ## Copyright and License
 
 Code released under [MIT License](LICENSE).
-

@@ -1,0 +1,66 @@
+/*
+ * Copyright 2025 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+rule greynoise_intelligence_brute_force_attack_detection {
+
+  meta:
+    author = "GreyNoise Intelligence"
+    rule_name = "GreyNoise Intelligence Brute Force Attack Detection"
+    description = "Detects multiple blocked login attempts from IPs flagged by GreyNoise threat intelligence."
+    severity = "High"
+    priority = "High"
+    mitre_attack_tactic = "Credential Access"
+    mitre_attack_technique = "T1110 - Brute Force"
+    tags = "cloud security, threat intelligence"
+
+  events:
+    $login.metadata.event_type = "USER_LOGIN"
+    $login.security_result.action = "BLOCK"
+    (
+        $login.src.ip = $correlation_ip or
+        $login.principal.ip = $correlation_ip
+    )
+
+    // GreyNoise entity match
+    $greynoise.graph.metadata.event_metadata.base_labels.log_types = "GREYNOISE"
+    $greynoise.graph.metadata.product_name = "GreyNoise Intelligence"
+    $greynoise.graph.metadata.entity_type = "IP_ADDRESS"
+    $greynoise.graph.entity.ip = $correlation_ip
+
+  match:
+    $correlation_ip over 15m
+
+  outcome:
+    $principal_ip = array_distinct($login.principal.ip)
+    $principal_hostname = array_distinct($login.principal.hostname)
+    $principal_user_userid = array_distinct($login.principal.user.userid)
+    $principal_mac = array_distinct($login.principal.mac)
+    $principal_ip_count = count($login.principal.ip)
+    
+    $source_ip = array_distinct($login.src.ip)
+    $source_hostname = array_distinct($login.src.hostname)
+    $source_user_userid = array_distinct($login.src.user.userid)
+    $source_mac = array_distinct($login.src.mac)
+    $source_ip_count = count($login.src.ip)
+    
+    $target_ip = array_distinct($login.target.ip)
+    $target_hostname = array_distinct($login.target.hostname)
+    $target_user_userid = array_distinct($login.target.user.userid)
+    $target_mac = array_distinct($login.target.mac)
+
+  condition:
+    $login and $greynoise and ($principal_ip_count>5 or $source_ip_count>5)
+}

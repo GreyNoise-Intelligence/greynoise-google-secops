@@ -1,0 +1,66 @@
+/*
+ * Copyright 2025 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+rule greynoise_intelligence_ip_match {
+
+  meta:
+    author = "GreyNoise Intelligence"
+    rule_name = "GreyNoise Intelligence IP Match"
+    description = "Detects events where source or principal IP matches a malicious or suspicious IP in GreyNoise intelligence."
+    severity = "High"
+    priority = "Medium"
+    tags = "cloud security, threat intelligence"
+
+  events:
+    $network.metadata.event_type != "GENERIC_EVENT"
+    (
+        $network.src.ip = $correlation_ip or
+        $network.principal.ip = $correlation_ip
+    )
+
+    // GreyNoise entity match
+    $greynoise.graph.metadata.event_metadata.base_labels.log_types = "GREYNOISE"
+    $greynoise.graph.metadata.product_name = "GreyNoise Intelligence"
+    $greynoise.graph.metadata.entity_type = "IP_ADDRESS"
+    (
+        $greynoise.graph.metadata.threat.threat_verdict = "MALICIOUS" 
+        or 
+        $greynoise.graph.metadata.threat.threat_verdict = "SUSPICIOUS"
+    )
+    $greynoise.graph.entity.ip = $correlation_ip
+
+  match:
+    $correlation_ip over 1h
+
+  outcome:
+    $principal_ip = array_distinct($network.principal.ip)
+    $principal_hostname = array_distinct($network.principal.hostname)
+    $principal_user_userid = array_distinct($network.principal.user.userid)
+    $principal_mac = array_distinct($network.principal.mac)
+    
+    $source_ip = array_distinct($network.src.ip)
+    $source_hostname = array_distinct($network.src.hostname)
+    $source_user_userid = array_distinct($network.src.user.userid)
+    $source_mac = array_distinct($network.src.mac)
+    
+    $target_ip = array_distinct($network.target.ip)
+    $target_hostname = array_distinct($network.target.hostname)
+    $target_user_userid = array_distinct($network.target.user.userid)
+    $target_mac = array_distinct($network.target.mac)
+
+  condition:
+    $network and $greynoise
+}

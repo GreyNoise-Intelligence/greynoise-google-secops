@@ -1,0 +1,21 @@
+graph.metadata.vendor_name = "GreyNoise Intelligence"
+graph.metadata.product_name = "GreyNoise Intelligence"
+$ip = graph.entity.ip
+$classification = graph.metadata.threat.threat_verdict
+$actor = graph.additional.fields["internet_scanner_actor"]
+$country = graph.entity.ip_geo_artifact.location.country_or_region
+$organization = graph.entity.ip_geo_artifact.network.organization_name
+$category = graph.additional.fields["network_category"]
+$description = graph.metadata.description
+$summary = graph.metadata.threat.summary
+$time = timestamp.get_timestamp(graph.metadata.collected_timestamp.seconds, "%Y-%m-%d %H:%M:%S")
+$first_seen_date = timestamp.get_timestamp(graph.metadata.threat.first_discovered_time.seconds, "%Y-%m-%d")
+match:
+    $ip, $classification, $description, $summary, $actor, $country, $organization, $category, $first_seen_date
+outcome:
+    $last_seen = window.last(graph.metadata.collected_timestamp.seconds, $time)
+    $primary_tag = re.replace((arrays.join_string(array_distinct(if(graph.entity.artifact.tags!="", graph.entity.artifact.tags, "-")),", ")), "(, -)|(-, )","")
+order:
+    $last_seen desc
+limit:
+    10000

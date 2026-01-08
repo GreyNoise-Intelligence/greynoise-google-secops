@@ -83,7 +83,7 @@ This playbook blocks or unblocks IP on Firewall based on the GreyNoise IP feed i
 
 ### Network Contamination Block
 
-This reusable block automates the process of identifying and blocking malicious IP addresses associated with specific CVEs using GreyNoise intelligence. [Download](<./playbooks/Network Contamination Block.zip>)
+This reusable block automates the process of identifying and blocking malicious IP addresses associated with specific CVEs using GreyNoise intelligence. [Download](<./Network Contamination Block.zip>)
 
 **Use Case**
 

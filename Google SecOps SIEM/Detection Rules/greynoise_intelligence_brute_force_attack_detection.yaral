@@ -49,13 +49,13 @@ rule greynoise_intelligence_brute_force_attack_detection {
     $principal_user_userid = array_distinct($login.principal.user.userid)
     $principal_mac = array_distinct($login.principal.mac)
     $principal_ip_count = count($login.principal.ip)
-    
+
     $source_ip = array_distinct($login.src.ip)
     $source_hostname = array_distinct($login.src.hostname)
     $source_user_userid = array_distinct($login.src.user.userid)
     $source_mac = array_distinct($login.src.mac)
     $source_ip_count = count($login.src.ip)
-    
+
     $target_ip = array_distinct($login.target.ip)
     $target_hostname = array_distinct($login.target.hostname)
     $target_user_userid = array_distinct($login.target.user.userid)

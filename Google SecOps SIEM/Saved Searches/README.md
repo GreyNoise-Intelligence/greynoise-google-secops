@@ -18,7 +18,6 @@ Follow these steps to create and run a saved search in Google SecOps SIEM:
 6. Select **Time Range**.
 7. Click on **Run Search** to execute the search query.
 
-
 ## Available Saved Searches
 
 | **Search Name** | **File** | **Description** |

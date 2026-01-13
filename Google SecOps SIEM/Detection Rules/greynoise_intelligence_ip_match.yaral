@@ -36,8 +36,8 @@ rule greynoise_intelligence_ip_match {
     $greynoise.graph.metadata.product_name = "GreyNoise Intelligence"
     $greynoise.graph.metadata.entity_type = "IP_ADDRESS"
     (
-        $greynoise.graph.metadata.threat.threat_verdict = "MALICIOUS" 
-        or 
+        $greynoise.graph.metadata.threat.threat_verdict = "MALICIOUS"
+        or
         $greynoise.graph.metadata.threat.threat_verdict = "SUSPICIOUS"
     )
     $greynoise.graph.entity.ip = $correlation_ip
@@ -50,12 +50,12 @@ rule greynoise_intelligence_ip_match {
     $principal_hostname = array_distinct($network.principal.hostname)
     $principal_user_userid = array_distinct($network.principal.user.userid)
     $principal_mac = array_distinct($network.principal.mac)
-    
+
     $source_ip = array_distinct($network.src.ip)
     $source_hostname = array_distinct($network.src.hostname)
     $source_user_userid = array_distinct($network.src.user.userid)
     $source_mac = array_distinct($network.src.mac)
-    
+
     $target_ip = array_distinct($network.target.ip)
     $target_hostname = array_distinct($network.target.hostname)
     $target_user_userid = array_distinct($network.target.user.userid)

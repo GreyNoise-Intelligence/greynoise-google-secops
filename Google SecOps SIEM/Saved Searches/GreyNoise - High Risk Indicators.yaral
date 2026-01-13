@@ -1,4 +1,4 @@
 graph.metadata.product_name = "GreyNoise Intelligence"
 graph.metadata.vendor_name = "GreyNoise Intelligence"
-$classification = graph.metadata.threat.threat_verdict 
+$classification = graph.metadata.threat.threat_verdict
 $classification = "MALICIOUS" or $classification = "SUSPICIOUS"

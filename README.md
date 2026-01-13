@@ -1,8 +1,12 @@
+<!-- markdownlint-disable MD041 -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Lint](https://github.com/GreyNoise-Intelligence/greynoise-google-secops/actions/workflows/lint.yaml/badge.svg)](https://github.com/GreyNoise-Intelligence/greynoise-google-secops/actions/workflows/lint.yaml)
 
 # GreyNoise Intelligence - Google SecOps Integration
 
-This repository contains the Google SecOps components for the GreyNoise Intelligence integration, including SIEM dashboards, saved searches, detection rules, and SOAR playbooks for comprehensive threat intelligence visualization, investigation, and automated response.
+This repository contains the Google SecOps components for the GreyNoise Intelligence integration,
+including SIEM dashboards, saved searches, detection rules, and SOAR playbooks for comprehensive
+threat intelligence visualization, investigation, and automated response.
 
 ---
 
@@ -28,21 +32,23 @@ This repository contains the Google SecOps components for the GreyNoise Intellig
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct,
+and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/GreyNoise-Intelligence/greynoise-google-secops/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available,
+see the [tags on this repository](https://github.com/GreyNoise-Intelligence/greynoise-google-secops/tags).
 
 ## Links
 
 * [GreyNoise.io](https://greynoise.io)
 * [GreyNoise Terms](https://greynoise.io/terms)
-* [GreyNoise Developer Portal](https://developer.greynoise.io)
+* [GreyNoise Developer Portal](https://docs.greynoise.io)
 
 ## Contact Us
 
-Have any questions or comments about GreyNoise? Contact us at [hello@greynoise.io](mailto:hello@greynoise.io)
+Have any questions or comments about GreyNoise? Contact us at [integrations@greynoise.io](mailto:integrations@greynoise.io)
 
 ## Copyright and License
 

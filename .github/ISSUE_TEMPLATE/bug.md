@@ -8,12 +8,16 @@ labels: 'bug'
 <!--- Provide a general summary of the issue in the Title above -->
 
 ## Environment
+
 * Enrichment Version: <!--- Provide enrichment version -->
 * Expected Output: <!--- Provide the expected output -->
+
     ```
     Expected Output Example
     ```
+
 * Received Output: <!--- Provide the received output -->
+
     ```
     Output Received Example
     ```

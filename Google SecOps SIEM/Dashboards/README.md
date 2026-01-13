@@ -17,7 +17,6 @@ Follow these steps to import a dashboard into Google SecOps SIEM:
 ![Import Dashboards](./Screenshots/Import%20Dashboards.png)
 5. Click **Import** to continue importing the dashboard to a personal or shared dashboard.
 
-
 ## Available Dashboards
 
 | **Dashboard Name** | **File** | **Description** |

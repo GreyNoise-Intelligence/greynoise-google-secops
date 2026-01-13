@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 rule greynoise_intelligence_inbound_network_traffic_with_asn_context {
 
   meta:
@@ -54,7 +54,7 @@ rule greynoise_intelligence_inbound_network_traffic_with_asn_context {
     $principal_hostname = array_distinct($network.principal.hostname)
     $principal_user_userid = array_distinct($network.principal.user.userid)
     $principal_mac = array_distinct($network.principal.mac)
-    
+
     $source_ip = array_distinct($network.src.ip)
     $source_hostname = array_distinct($network.src.hostname)
     $source_user_userid = array_distinct($network.src.user.userid)

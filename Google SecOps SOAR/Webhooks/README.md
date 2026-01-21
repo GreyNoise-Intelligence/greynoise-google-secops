@@ -25,8 +25,8 @@ To ingest Alerts and Feed data, you need to create **3 webhooks** to support dif
 1. Log in to the **Google SecOps SOAR UI** as an admin
 2. Navigate to **SOAR Settings → Ingestion → Webhooks**
 
-<img src="screenshots/navigate-to-soar.png" alt="Navigate to Webhooks" height="400">
-<img src="screenshots/navigate-to-webhooks.png" alt="Navigate to Webhooks" height="400">
+![Navigate to Webhooks](screenshots/navigate-to-soar.png)
+![Navigate to Webhooks](screenshots/navigate-to-webhooks.png)
 
 ### Step 2: Add Incoming Webhook
 
@@ -55,6 +55,11 @@ To ingest Alerts and Feed data, you need to create **3 webhooks** to support dif
 5. Confirm proper mapping (green checkmark indicates success)
 
 ![Map Alert Fields](screenshots/map-alert-fields.png)
+
+**Notes:**
+
+- The static values will not be visible in the preview output. However, they will be saved and will be populated during the ingestion process.
+- We have temporarily mapped Alert Priority to the classification field even though Priority is an enum; this mapping will not correctly determine priority due to webhook expression builder limitations. The current webhook mapping UI does not support nested if-else logic to map multiple classification values to priority levels (e.g., "malicious → CRITICAL", "benign → MEDIUM"), as discussed in the [community forum](https://security.googlecloudcommunity.com/google-security-operations-2/how-to-map-the-payload-field-to-the-soar-webhook-fields-in-google-secops-soar-severity-mapping-nested-ifelse-and-storing-full-json-6284).
 
 ### Step 5: Enable the Webhook
 
@@ -89,7 +94,7 @@ Enable ingestion of GreyNoise Alert data into Google SecOps SOAR using webhooks.
 | **DeviceProduct** | `GreyNoise-Alert` | Static | Product information |
 | **EndTime** | `timestamp` | Dynamic | Time the alert ended |
 | **Priority** | `data.classification` | Dynamic | Classification of the alert |
-| **EventsList** | `data \| first(1)` | Dynamic | List of events<br><br>**Note:** Here we are only considering the first record so it can be easily accessible in the playbook. |
+| **EventsList** | `data \| first(1)` | Dynamic | List of events. **Note:** Here we are only considering the first record so it can be easily accessible in the playbook. |
 | **EventProduct** | `GreyNoise` | Static | Product information |
 | **EventName** | `alert.name` | Dynamic | Name of the event |
 
@@ -196,6 +201,7 @@ Enable ingestion of GreyNoise Alert data into Google SecOps SOAR using webhooks.
 Enable ingestion of GreyNoise feed data (IPs and CVEs) into Google SecOps SOAR to track observable state changes over time and trigger appropriate playbooks based on updates.
 
 > **Note:** You need to create **two separate webhooks**:
+>
 > 1. **IP Classification Change Webhook**
 > 2. **CVE Change Webhook** (for CVE Spike Activity and CVE Status Change)
 
@@ -290,7 +296,7 @@ Enable ingestion of GreyNoise feed data (IPs and CVEs) into Google SecOps SOAR t
     "event_type": "ip-classification-change",
     "ip": "86.57.2.53",
     "new_state": {"classification": "malicious"},
-    "old_state": "unknown",
+    "old_state": {"classification": "unknown"},
     "timestamp": "2025-08-11T10:42:39Z",
     "workspace_id": "e4a5be2e-1be0-4105-a5e2-51e6a5525fa0"
 }
@@ -307,6 +313,7 @@ Enable ingestion of GreyNoise feed data (IPs and CVEs) into Google SecOps SOAR t
 ## References
 
 For additional assistance with GreyNoise webhook configuration, please refer to:
+
 - [GreyNoise Documentation](https://docs.greynoise.io/)
 - [Google SecOps SOAR Webhook Documentation](https://docs.cloud.google.com/chronicle/docs/soar/ingest/webhooks/setting-up-a-webhook)
 

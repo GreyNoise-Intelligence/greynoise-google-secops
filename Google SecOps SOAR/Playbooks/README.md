@@ -34,6 +34,7 @@ Apart from GreyNoise the following additional integrations and Power Ups must be
 - **[Siemplify](https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/siemplify)** - Built-in tools for case management, entity creation, and workflow control
 
 **Installation Steps:**
+
 1. Navigate to **Content Hub > Response Integrations** in your SecOps instance
 2. Search for the integration name (e.g. "Zscaler")
 3. Click **Install** and follow the configuration wizard
@@ -42,7 +43,6 @@ Apart from GreyNoise the following additional integrations and Power Ups must be
 For detailed instructions: [Install an Integration](https://docs.cloud.google.com/chronicle/docs/soar/respond/integrations-setup/configure-integrations#install-an-integration)
 
 ### **Power Ups** (Install from Content Hub > Power Ups)
-
 
 - **[Functions](https://docs.cloud.google.com/chronicle/docs/soar/marketplace-and-integrations/power-ups/functions)** - Built-in utility functions for data processing (JSON Path queries, string manipulation, etc.)
 - **[Tools](https://docs.cloud.google.com/chronicle/docs/soar/marketplace/power-ups/tools)** - A set of utility actions for data manipulation to power up playbook capabilities (Change Case Name, Attach Playbook, etc.)

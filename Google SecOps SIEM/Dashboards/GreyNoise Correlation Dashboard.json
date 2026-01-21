@@ -1,0 +1,1220 @@
+{
+    "dashboards": [
+        {
+            "dashboard": {
+                "name": "75123051-e4da-4487-a7fc-e36b250fdb4e",
+                "displayName": "GreyNoise Correlation Dashboard",
+                "description": "The Correlation dashboard is designed to identify relationships across indicators and events from other sources.",
+                "definition": {
+                    "filters": [
+                        {
+                            "id": "GlobalTimeFilter",
+                            "dataSource": "GLOBAL",
+                            "filterOperatorAndFieldValues": [
+                                {
+                                    "filterOperator": "PAST",
+                                    "fieldValues": [
+                                        "1",
+                                        "WEEK"
+                                    ]
+                                }
+                            ],
+                            "displayName": "Global Time Filter",
+                            "chartIds": [
+                                "eb8d2a39-deba-4e59-9de4-41f4655c7981",
+                                "f2254e8c-ff39-4e51-9972-d0e5635f6c0e",
+                                "5129cbe3-353f-463d-937c-fa7571958890",
+                                "05a9e5bc-952c-49fa-b03b-4ddecde35df7",
+                                "6440b25e-b33c-4e37-9d3c-5d3097736c38",
+                                "a784661a-6882-4ac4-abed-04f3f9f53373",
+                                "84c98d52-979f-465a-9faa-fc1d53d596ca",
+                                "be532b7b-cab4-4ebf-92ec-dc4a1d1f4bc0",
+                                "3fb57bdf-68fe-41f3-8d3b-62565332a374",
+                                "83d70ed9-e89c-450e-bc51-543badb5abbe",
+                                "21e2f960-4d23-4abb-9064-1aae2181be4e",
+                                "aff5be25-5dcc-4a2b-9e9f-df0fe693f2e6",
+                                "0a88ed3c-7994-4f5c-8855-ccb95c72a2a1"
+                            ],
+                            "isStandardTimeRangeFilter": true,
+                            "isStandardTimeRangeFilterEnabled": true
+                        },
+                        {
+                            "id": "2b76f5a7-a898-4f7f-9c2f-bdb97011cb5c",
+                            "dataSource": "IOC_MATCHES",
+                            "fieldPath": "ioc.severity",
+                            "filterOperatorAndFieldValues": [
+                                {
+                                    "filterOperator": "EQUAL",
+                                    "fieldValues": [
+                                        ""
+                                    ]
+                                }
+                            ],
+                            "displayName": "Classification Filter",
+                            "chartIds": [
+                                "eb8d2a39-deba-4e59-9de4-41f4655c7981",
+                                "f2254e8c-ff39-4e51-9972-d0e5635f6c0e",
+                                "5129cbe3-353f-463d-937c-fa7571958890",
+                                "6440b25e-b33c-4e37-9d3c-5d3097736c38",
+                                "05a9e5bc-952c-49fa-b03b-4ddecde35df7",
+                                "a784661a-6882-4ac4-abed-04f3f9f53373",
+                                "84c98d52-979f-465a-9faa-fc1d53d596ca",
+                                "3fb57bdf-68fe-41f3-8d3b-62565332a374",
+                                "be532b7b-cab4-4ebf-92ec-dc4a1d1f4bc0",
+                                "21e2f960-4d23-4abb-9064-1aae2181be4e",
+                                "83d70ed9-e89c-450e-bc51-543badb5abbe",
+                                "aff5be25-5dcc-4a2b-9e9f-df0fe693f2e6",
+                                "0a88ed3c-7994-4f5c-8855-ccb95c72a2a1",
+                                "9d2c20ab-6134-4cbc-ad7c-0967c062fd22"
+                            ]
+                        }
+                    ],
+                    "charts": [
+                        {
+                            "dashboardChart": "eb8d2a39-deba-4e59-9de4-41f4655c7981",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 47,
+                                "startY": 96,
+                                "spanY": 29
+                            },
+                            "filtersIds": [
+                                "GlobalTimeFilter",
+                                "2b76f5a7-a898-4f7f-9c2f-bdb97011cb5c"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "a784661a-6882-4ac4-abed-04f3f9f53373",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 125,
+                                "spanY": 28
+                            },
+                            "filtersIds": [
+                                "GlobalTimeFilter",
+                                "2b76f5a7-a898-4f7f-9c2f-bdb97011cb5c"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "6440b25e-b33c-4e37-9d3c-5d3097736c38",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 153,
+                                "spanY": 33
+                            },
+                            "filtersIds": [
+                                "GlobalTimeFilter",
+                                "2b76f5a7-a898-4f7f-9c2f-bdb97011cb5c"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "4632f840-5aa7-48e8-8692-19dbc567d7bc",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 0,
+                                "spanY": 19
+                            }
+                        },
+                        {
+                            "dashboardChart": "5129cbe3-353f-463d-937c-fa7571958890",
+                            "chartLayout": {
+                                "startX": 47,
+                                "spanX": 48,
+                                "startY": 44,
+                                "spanY": 29
+                            },
+                            "filtersIds": [
+                                "GlobalTimeFilter",
+                                "2b76f5a7-a898-4f7f-9c2f-bdb97011cb5c"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "be532b7b-cab4-4ebf-92ec-dc4a1d1f4bc0",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 47,
+                                "startY": 83,
+                                "spanY": 13
+                            },
+                            "filtersIds": [
+                                "GlobalTimeFilter",
+                                "2b76f5a7-a898-4f7f-9c2f-bdb97011cb5c"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "aff5be25-5dcc-4a2b-9e9f-df0fe693f2e6",
+                            "chartLayout": {
+                                "startX": 32,
+                                "spanX": 32,
+                                "startY": 32,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "GlobalTimeFilter",
+                                "2b76f5a7-a898-4f7f-9c2f-bdb97011cb5c"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "05a9e5bc-952c-49fa-b03b-4ddecde35df7",
+                            "chartLayout": {
+                                "startX": 64,
+                                "spanX": 31,
+                                "startY": 32,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "GlobalTimeFilter",
+                                "2b76f5a7-a898-4f7f-9c2f-bdb97011cb5c"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "21e2f960-4d23-4abb-9064-1aae2181be4e",
+                            "chartLayout": {
+                                "startX": 32,
+                                "spanX": 32,
+                                "startY": 19,
+                                "spanY": 13
+                            },
+                            "filtersIds": [
+                                "GlobalTimeFilter",
+                                "2b76f5a7-a898-4f7f-9c2f-bdb97011cb5c"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "83d70ed9-e89c-450e-bc51-543badb5abbe",
+                            "chartLayout": {
+                                "startX": 64,
+                                "spanX": 31,
+                                "startY": 19,
+                                "spanY": 13
+                            },
+                            "filtersIds": [
+                                "GlobalTimeFilter",
+                                "2b76f5a7-a898-4f7f-9c2f-bdb97011cb5c"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "3fb57bdf-68fe-41f3-8d3b-62565332a374",
+                            "chartLayout": {
+                                "startX": 47,
+                                "spanX": 49,
+                                "startY": 96,
+                                "spanY": 29
+                            },
+                            "filtersIds": [
+                                "GlobalTimeFilter",
+                                "2b76f5a7-a898-4f7f-9c2f-bdb97011cb5c"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "f2254e8c-ff39-4e51-9972-d0e5635f6c0e",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 186,
+                                "spanY": 26
+                            },
+                            "filtersIds": [
+                                "GlobalTimeFilter",
+                                "2b76f5a7-a898-4f7f-9c2f-bdb97011cb5c"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "84c98d52-979f-465a-9faa-fc1d53d596ca",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 47,
+                                "startY": 44,
+                                "spanY": 29
+                            },
+                            "filtersIds": [
+                                "GlobalTimeFilter",
+                                "2b76f5a7-a898-4f7f-9c2f-bdb97011cb5c"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "0a88ed3c-7994-4f5c-8855-ccb95c72a2a1",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 32,
+                                "startY": 19,
+                                "spanY": 25
+                            },
+                            "filtersIds": [
+                                "GlobalTimeFilter",
+                                "2b76f5a7-a898-4f7f-9c2f-bdb97011cb5c"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "063d68c1-cc24-43b7-8753-deb97a3d3953",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 73,
+                                "spanY": 10
+                            }
+                        },
+                        {
+                            "dashboardChart": "9d2c20ab-6134-4cbc-ad7c-0967c062fd22",
+                            "chartLayout": {
+                                "startX": 47,
+                                "spanX": 49,
+                                "startY": 83,
+                                "spanY": 13
+                            },
+                            "filtersIds": [
+                                "2b76f5a7-a898-4f7f-9c2f-bdb97011cb5c"
+                            ]
+                        }
+                    ]
+                },
+                "type": "CUSTOM",
+                "etag": "d2320891918b35357c67b5b42c2396d31664a92fbe5facbaa8045ce0f7cc87a2",
+                "access": "DASHBOARD_PRIVATE"
+            },
+            "dashboardCharts": [
+                {
+                    "name": "a784661a-6882-4ac4-abed-04f3f9f53373",
+                    "displayName": "IOC MATCHES OVER TIME BY CATEGORY",
+                    "description": "Bar chart showing GreyNoise Intelligence IOC match trends grouped by category.",
+                    "chartDatasource": {
+                        "dashboardQuery": "c1d81b55-1e38-4767-9313-75afc3090a62",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesName": "hosting",
+                                "seriesType": "BAR",
+                                "encode": {
+                                    "x": "match_bucket",
+                                    "y": "count"
+                                },
+                                "dataLabel": {},
+                                "itemStyle": {
+                                    "color": "#1a73e8"
+                                },
+                                "seriesUniqueValue": "hosting"
+                            },
+                            {
+                                "seriesName": "isp",
+                                "seriesType": "BAR",
+                                "encode": {
+                                    "x": "match_bucket",
+                                    "y": "count"
+                                },
+                                "dataLabel": {},
+                                "itemStyle": {
+                                    "color": "#eb730a"
+                                },
+                                "seriesUniqueValue": "isp"
+                            },
+                            {
+                                "seriesName": "business",
+                                "seriesType": "BAR",
+                                "encode": {
+                                    "x": "match_bucket",
+                                    "y": "count"
+                                },
+                                "dataLabel": {},
+                                "itemStyle": {
+                                    "color": "#10a3b7"
+                                },
+                                "seriesUniqueValue": "business"
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "CATEGORY",
+                                "displayName": "DATE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE",
+                                "displayName": "COUNT"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "top": 12,
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "seriesColumn": [
+                            "category"
+                        ],
+                        "groupingType": "Grouped"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "4d36db140482dfa78df485b951158cd666736efd60713c8e61b45fdb82f93923",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "3fb57bdf-68fe-41f3-8d3b-62565332a374",
+                    "displayName": "Top 10 RARELY SEEN IP",
+                    "description": "Table of the 10 least frequently matched IPs from GreyNoise Intelligence.",
+                    "chartDatasource": {
+                        "dashboardQuery": "1682842f-e024-40f2-acd1-62fad62bb9dc",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "columnDefs": [
+                            {
+                                "field": "ioc_value",
+                                "header": "IP"
+                            },
+                            {
+                                "field": "count",
+                                "header": "COUNT"
+                            },
+                            {
+                                "field": "hostname",
+                                "header": "HOSTNAME"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "89a7095b041eec21da63f163417e2f27fd800d17e692e10bb0ab097582b530c3",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "aff5be25-5dcc-4a2b-9e9f-df0fe693f2e6",
+                    "displayName": "MALICIOUS IPS",
+                    "description": "Count of IPs classified as malicious by GreyNoise Intelligence.",
+                    "chartDatasource": {
+                        "dashboardQuery": "5533e9e6-4eb6-4ab2-bf06-c324f6e1395f",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "MALICIOUS COUNT",
+                                "field": "malicious_count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_PLAIN_TEXT",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "847b6b0be0bb16f0310d92dd8be2b2c8f6f39396e9276bb27a93303bf8b429ba",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "be532b7b-cab4-4ebf-92ec-dc4a1d1f4bc0",
+                    "displayName": "TOTAL EVENT MATCHES",
+                    "description": "Total count of GreyNoise Intelligence IOC matches detected in environment.",
+                    "chartDatasource": {
+                        "dashboardQuery": "e58f3f7e-46a6-4df5-99cf-18fc8f97669b",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "TOTAL EVENT MATCHES",
+                                "field": "ip_count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_PLAIN_TEXT",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "b97d2dcd07415f2c7d17c45d781b11ac4a2780a04425f5e39e829530e28ba591",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "21e2f960-4d23-4abb-9064-1aae2181be4e",
+                    "displayName": "BENIGN IPS",
+                    "description": "Count of IPs classified as benign by GreyNoise Intelligence.",
+                    "chartDatasource": {
+                        "dashboardQuery": "24783d1a-0ee1-454e-a0d8-80d3fb6d41ee",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "BENIGN IPS",
+                                "field": "bening_count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_PLAIN_TEXT",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "d06d3901d079522f71558517b39e54e47ef78ce2869f4052add198fab3d3e08c",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "5129cbe3-353f-463d-937c-fa7571958890",
+                    "displayName": "IOC BY CLASSIFICATION",
+                    "description": "Pie chart showing GreyNoise Intelligence IOC distribution by classification.",
+                    "chartDatasource": {
+                        "dashboardQuery": "8ca1ff86-deb6-4e43-b4a8-8b52ca89e88d",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "PIE",
+                                "encode": {
+                                    "value": "count",
+                                    "itemName": "classification"
+                                },
+                                "dataLabel": {
+                                    "show": true
+                                },
+                                "radius": [
+                                    "0%",
+                                    "70%"
+                                ],
+                                "itemStyle": {
+                                    "color": "b=>{const {map:c}=bDf(this.theme);b=iEf(b,BDf(this.form.controls.seriesConfig.getRawValue()),a);a=b.nextColorIndex;let d;return(d=\nc.get(b.color))!=null?d:b.color}"
+                                },
+                                "itemColors": {
+                                    "colors": [
+                                        {
+                                            "key": "Malicious",
+                                            "value": {
+                                                "color": "#1a73e8",
+                                                "label": "Malicious"
+                                            }
+                                        },
+                                        {
+                                            "key": "Unknown",
+                                            "value": {
+                                                "color": "#eb730a",
+                                                "label": "Unknown"
+                                            }
+                                        },
+                                        {
+                                            "key": "Suspicious",
+                                            "value": {
+                                                "color": "#10a3b7",
+                                                "label": "Suspicious"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "top": 12,
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "45edff7297d311ad370935250ba56fdd1e92420df4046ead2593d2917825fa62",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "4632f840-5aa7-48e8-8692-19dbc567d7bc",
+                    "displayName": "markdown",
+                    "visualization": {
+                        "markdown": {
+                            "content": "# ![GreyNoise Logo](https://files.readme.io/9ed004a-small-greynoisegreytrans.png) GreyNoise Intelligence Correlation Dashboard\n---\nThe Correlation dashboard is designed to identify relationships of GreyNoise Intelligence indicators and events from other sources.\n\n1. **IOC Match Visibility**: Monitor GreyNoise indicators matched in your environment\n2. **Threat Classification**: Breakdown by Malicious, Suspicious, Benign, and Unknown IPs\n3. **Geolocation Overview**:  Map-based visualization of IOC geographic origins\n4. **IoC Filtering**: Time filter and classification filter for deeper analysis\n",
+                            "properties": {
+                                "backgroundColor": "transparent"
+                            }
+                        }
+                    },
+                    "tileType": "TILE_TYPE_MARKDOWN",
+                    "etag": "9cbf49a091ccb90f04c6d54501c644ffce36d716152a64bf356bfbca357fb5f0"
+                },
+                {
+                    "name": "84c98d52-979f-465a-9faa-fc1d53d596ca",
+                    "displayName": "Top 10 CATEGORIES",
+                    "description": "Pie chart visualizing the top 10 IoC categories of GreyNoise Intelligence IOC matches.",
+                    "chartDatasource": {
+                        "dashboardQuery": "ea77791d-10ae-4b87-b449-9bb873e2451b",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "PIE",
+                                "encode": {
+                                    "value": "count",
+                                    "itemName": "category"
+                                },
+                                "dataLabel": {
+                                    "show": true
+                                },
+                                "radius": [
+                                    "0%",
+                                    "70%"
+                                ],
+                                "itemStyle": {
+                                    "color": "b=>{const {map:c}=bDf(this.theme);b=iEf(b,BDf(this.form.controls.seriesConfig.getRawValue()),a);a=b.nextColorIndex;let d;return(d=\nc.get(b.color))!=null?d:b.color}"
+                                },
+                                "itemColors": {
+                                    "colors": [
+                                        {
+                                            "key": "hosting",
+                                            "value": {
+                                                "color": "#1a73e8",
+                                                "label": "hosting"
+                                            }
+                                        },
+                                        {
+                                            "key": "isp",
+                                            "value": {
+                                                "color": "#eb730a",
+                                                "label": "isp"
+                                            }
+                                        },
+                                        {
+                                            "key": "business",
+                                            "value": {
+                                                "color": "#10a3b7",
+                                                "label": "business"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "top": 12,
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "c3f9f46cbc4ca74c3103beba615d56465a6a7f64372fa06100703e40fa340a18",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "063d68c1-cc24-43b7-8753-deb97a3d3953",
+                    "displayName": "markdown",
+                    "visualization": {
+                        "markdown": {
+                            "content": "# IOC Match Event & Trends\n---\nMonitor the volume and patterns of GreyNoise Intelligence IOC match events across your environment. Includes duplicate matches to show true activity volume, temporal trends, and detailed drill-down capabilities for security investigations.\n",
+                            "properties": {
+                                "backgroundColor": "transparent"
+                            }
+                        }
+                    },
+                    "tileType": "TILE_TYPE_MARKDOWN",
+                    "etag": "76cdd0df6fd8f523ea8ff4e7694a2f6535e500fba00fa6fb341b3eb76c7cfeab"
+                },
+                {
+                    "name": "9d2c20ab-6134-4cbc-ad7c-0967c062fd22",
+                    "displayName": "EVENTS MATCHES IN LAST 24 HOURS",
+                    "description": "Count of GreyNoise Intelligence IOC matches detected in environment in last 24 hours.",
+                    "chartDatasource": {
+                        "dashboardQuery": "bc6f537b-a1d5-49f4-a99b-3262b694b7bf",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "EVENTS MATCHES IN LAST 24 HOURS",
+                                "field": "ip_count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_PLAIN_TEXT",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "cf18446af044b307d69e626deb2ea2f9869c12ab832e0692d9f04c52c45e83c4",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "6440b25e-b33c-4e37-9d3c-5d3097736c38",
+                    "displayName": "IOCS GEOLOCATION OVERVIEW",
+                    "description": "World map plotting the geographic origin of matched GreyNoise Intelligence IOCs.",
+                    "chartDatasource": {
+                        "dashboardQuery": "ce562901-40db-4b64-ac5c-bf6e000a7af3",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "MAP",
+                                "encode": {},
+                                "dataLabel": {}
+                            }
+                        ],
+                        "googleMapsConfig": {
+                            "dataSettings": {
+                                "latitudeColumn": "max_latitude",
+                                "longitudeColumn": "max_longitude",
+                                "countColumn": "count"
+                            },
+                            "plotMode": "PLOT_MODE_BOTH",
+                            "mapPosition": {
+                                "fitData": true,
+                                "latitudeValue": 24.45178779999999,
+                                "longitudeValue": 147.75024241381965,
+                                "zoomScaleValue": 2.553164861076082
+                            },
+                            "pointSettings": {
+                                "pointSizeType": "POINT_SIZE_TYPE_FIXED",
+                                "color": "#009886"
+                            }
+                        }
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "daf040f3b7053916ced5aa65bbfb647a35ff69a913bbb331e75502c75e6b4412",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "eb8d2a39-deba-4e59-9de4-41f4655c7981",
+                    "displayName": "Top 10 IP INDICATORS",
+                    "description": "Table of the 10 most frequently matched IPs from GreyNoise Intelligence with hostname details.",
+                    "chartDatasource": {
+                        "dashboardQuery": "af1ca00c-2aaa-4fce-85a8-c6d14a4cc7c0",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "columnDefs": [
+                            {
+                                "field": "ioc_value",
+                                "header": "IP"
+                            },
+                            {
+                                "field": "count",
+                                "header": "COUNT"
+                            },
+                            {
+                                "field": "hostname",
+                                "header": "HOSTNAME"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "70e980236bc71d99fe8eac1b06a7816aa256055f435eb6861dec4438b3b95b13",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "05a9e5bc-952c-49fa-b03b-4ddecde35df7",
+                    "displayName": "SUSPICIOUS IPS",
+                    "description": "Count of IPs classified as suspicious by GreyNoise Intelligence.",
+                    "chartDatasource": {
+                        "dashboardQuery": "afd9e56c-9a1b-4eb7-afc7-279a74ff3da9",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "SUSPICIOUS IPS",
+                                "field": "suspicious_count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_PLAIN_TEXT",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "1c70d582f47ebe3de62a5b10be4b73453273687d7647e3865f5d4b2d766a0ddd",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "0a88ed3c-7994-4f5c-8855-ccb95c72a2a1",
+                    "displayName": "GREYNOISE UNIQUE IOC MATCHES",
+                    "description": "Count of distinct IP addresses matched against GreyNoise Intelligence.",
+                    "chartDatasource": {
+                        "dashboardQuery": "1e47d8d8-bb4e-444d-9a17-52c299ae8f37",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "GREYNOISE UNIQUE IOC MATCHES",
+                                "field": "unique_count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_PLAIN_TEXT",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "d1d1ae5160475b102601a0b26617832bac667f82f4244a57acd0a1609d9782af",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "83d70ed9-e89c-450e-bc51-543badb5abbe",
+                    "displayName": "UNKNOWN IPS",
+                    "description": "Count of IPs classified as unknow by GreyNoise Intelligence.",
+                    "chartDatasource": {
+                        "dashboardQuery": "94bed1dc-41e3-4a36-b399-1075f06afeb3",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "UNKNOWN IPS",
+                                "field": "unkwons_count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_PLAIN_TEXT",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "c19d20e5749d38e53f67fb6001db83c81405a0373fc84ea59523d16872b743f3",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "f2254e8c-ff39-4e51-9972-d0e5635f6c0e",
+                    "displayName": "Correlation Overview [DRILLDOWN]",
+                    "description": "Comprehensive investigation table displaying GreyNoise Intelligence IOC matches for in-depth analysis.",
+                    "chartDatasource": {
+                        "dashboardQuery": "06663147-2127-4821-9e7b-1a09abcebec8",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "columnDefs": [
+                            {
+                                "field": "ip",
+                                "header": "IP"
+                            },
+                            {
+                                "field": "classification",
+                                "header": "CLASSIFICATION"
+                            },
+                            {
+                                "field": "category",
+                                "header": "CATEGORY"
+                            },
+                            {
+                                "field": "hostname",
+                                "header": "HOSTNAME"
+                            },
+                            {
+                                "field": "latitude",
+                                "header": "LATITUDE"
+                            },
+                            {
+                                "field": "longitude",
+                                "header": "LONGITUDE"
+                            },
+                            {
+                                "field": "country",
+                                "header": "COUNTRY"
+                            },
+                            {
+                                "field": "match_bucket",
+                                "header": "IOC MATCH DATE "
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "1d56af8d8bad7058d31315c0dd3f696942a9c2911491180a6e26aa698e7a3b61",
+                    "drillDownConfig": {
+                        "leftDrillDowns": [
+                            {
+                                "id": "EB6B3127-8725-4B12-BEAA-572CC0D0E51B",
+                                "displayName": "IP Drill Down",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "leftClickColumn": "ip",
+                                    "query": {
+                                        "query": "target.ip = ${ip} OR network.dns.answers.data = ${ip}"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "dashboardQueries": [
+                {
+                    "name": "ea77791d-10ae-4b87-b449-9bb873e2451b",
+                    "query": "ioc.feed_log_type = \"GREYNOISE\"\r\nioc.feed_name  = \"GreyNoise Intelligence\"\r\n$category = ioc.category\r\nmatch: \r\n    $category \r\noutcome: \r\n    $count = count_distinct(ioc.ioc_value) \r\norder: \r\n    $count desc \r\nlimit: \r\n    10",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "be7d30a29a712b4437334623fecdf46870a1ac14ffcf4202164a551eb5343844"
+                },
+                {
+                    "name": "24783d1a-0ee1-454e-a0d8-80d3fb6d41ee",
+                    "query": "ioc.feed_log_type = \"GREYNOISE\"\r\nioc.feed_name = \"GreyNoise Intelligence\"\r\nioc.severity = \"Benign\"\r\noutcome:\r\n    $bening_count = count_distinct(ioc.ioc_value)",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "cb3158f94d2d0ddeb7e46a1aca8746938870b1a2c9cc2a45fd6a1eb51e202806"
+                },
+                {
+                    "name": "94bed1dc-41e3-4a36-b399-1075f06afeb3",
+                    "query": "ioc.feed_log_type = \"GREYNOISE\"\r\nioc.feed_name = \"GreyNoise Intelligence\"\r\nioc.severity = \"Unknown\"\r\noutcome:\r\n    $unkwons_count = count_distinct(ioc.ioc_value)",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "339cc25d357a134242a10f552bab7c425b66b3dd7ca6bb6b300947fa10413194"
+                },
+                {
+                    "name": "5533e9e6-4eb6-4ab2-bf06-c324f6e1395f",
+                    "query": "ioc.feed_log_type = \"GREYNOISE\"\r\nioc.feed_name = \"GreyNoise Intelligence\"\r\nioc.severity = \"Malicious\"\r\noutcome:\r\n    $malicious_count = count_distinct(ioc.ioc_value)",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "91cfa509fe1c74cb9a3e6017b2dfd46df82e6cf11f849ed308104108a516bd75"
+                },
+                {
+                    "name": "af1ca00c-2aaa-4fce-85a8-c6d14a4cc7c0",
+                    "query": "ioc.feed_log_type = \"GREYNOISE\"\r\nioc.feed_name = \"GreyNoise Intelligence\"\r\n$ip = ioc.ioc_value \r\n$classification = ioc.severity \r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude \r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\nmatch: \r\n    ioc.ioc_value \r\noutcome: \r\n    $count = count_distinct(strings.concat($ip, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country))\r\n    $hostname = re.replace(re.replace(re.replace(arrays.join_string(array_distinct(ioc.asset.hostname), \",\"), \",,+\", \",\"), \"^,|,$\", \"\"), \"^\\\\s*$|^$\", \"-\")\r\norder: \r\n    $count desc \r\nlimit: \r\n    10",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "346f93e983f6bf9e8ef7d3ff9cbf11dd7c43dc0950d47747e81032ca8110b4b9"
+                },
+                {
+                    "name": "8ca1ff86-deb6-4e43-b4a8-8b52ca89e88d",
+                    "query": "ioc.feed_log_type = \"GREYNOISE\"\r\nioc.feed_name  = \"GreyNoise Intelligence\"\r\n$classification = ioc.severity \r\nmatch: \r\n    $classification\r\noutcome: \r\n    $count = count_distinct(ioc.ioc_value)",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "99aabcfc4894ed2aa705e150920c0fc5a44b9b544991a3d45988fa6e3a611611"
+                },
+                {
+                    "name": "ce562901-40db-4b64-ac5c-bf6e000a7af3",
+                    "query": "ioc.feed_log_type = \"GREYNOISE\"\r\nioc.feed_name  = \"GreyNoise Intelligence\"\r\n$ip = ioc.ioc_value \r\n$classification = ioc.severity \r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude \r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\nmatch:\r\n    $country\r\noutcome:\r\n    $count = count_distinct(strings.concat($ip, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country))\r\n    $max_latitude = max(ioc.location.region_coordinates.latitude)\r\n    $max_longitude = max(ioc.location.region_coordinates.longitude)\r\norder:\r\n    $count desc\r\nlimit:\r\n    10000",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "8dbdc1e3f8dc14d4dd38558d3094f71435dc5115279c7962b2c7b98fc7e56e7e"
+                },
+                {
+                    "name": "afd9e56c-9a1b-4eb7-afc7-279a74ff3da9",
+                    "query": "ioc.feed_log_type = \"GREYNOISE\"\r\nioc.feed_name = \"GreyNoise Intelligence\"\r\nioc.severity = \"Suspicious\"\r\noutcome:\r\n    $suspicious_count = count_distinct(ioc.ioc_value)",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "7e0e347e17c840368c35b3638b41799a8c517662866b3334e093be9539508384"
+                },
+                {
+                    "name": "1682842f-e024-40f2-acd1-62fad62bb9dc",
+                    "query": "ioc.feed_log_type = \"GREYNOISE\"\r\nioc.feed_name  = \"GreyNoise Intelligence\"\r\n$ip = ioc.ioc_value \r\n$classification = ioc.severity \r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude \r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\nmatch: \r\n    ioc.ioc_value \r\noutcome: \r\n    $count = count_distinct(strings.concat($ip, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country))\r\n    $hostname = re.replace(re.replace(re.replace(arrays.join_string(array_distinct(ioc.asset.hostname), \",\"), \",,+\", \",\"), \"^,|,$\", \"\"), \"^\\\\s*$|^$\", \"-\")\r\norder: \r\n    $count asc \r\nlimit: \r\n    10",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "2081b5bc92ddd43a7a0c95457d21d5bfc65991dc022297f523ff6d464ee7c017"
+                },
+                {
+                    "name": "bc6f537b-a1d5-49f4-a99b-3262b694b7bf",
+                    "query": "ioc.feed_log_type = \"GREYNOISE\"\r\nioc.feed_name = \"GreyNoise Intelligence\"\r\n$ip = ioc.ioc_value \r\n$classification = ioc.severity \r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude \r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\ntimestamp.now() - ioc.day_bucket_seconds <= 86400\r\noutcome:\r\n    $ip_count = count_distinct(strings.concat($ip, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country))\r\n    ",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "e79f76c55e6b4ea5a5cc0fc1430af5dc096da2d9e6716c6c9c87a719ea931f8a"
+                },
+                {
+                    "name": "1e47d8d8-bb4e-444d-9a17-52c299ae8f37",
+                    "query": "ioc.feed_log_type = \"GREYNOISE\"\r\nioc.feed_name = \"GreyNoise Intelligence\"\r\noutcome:\r\n    $unique_count = count_distinct(ioc.ioc_value)",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "16077ff01cc2ac3c4fa0a60ffd33590dbd69b11eb79bfc29e941e483283cbb05"
+                },
+                {
+                    "name": "e58f3f7e-46a6-4df5-99cf-18fc8f97669b",
+                    "query": "ioc.feed_log_type = \"GREYNOISE\"\r\nioc.feed_name = \"GreyNoise Intelligence\"\r\n$ip = ioc.ioc_value \r\n$classification = ioc.severity \r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude \r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\noutcome:\r\n    $ip_count = count_distinct(strings.concat($ip, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country))",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "ae30f87d52579cac32ee4e1c6f939bfeafc51dd1919e5a68848af6c2f4769b16"
+                },
+                {
+                    "name": "06663147-2127-4821-9e7b-1a09abcebec8",
+                    "query": "ioc.feed_log_type = \"GREYNOISE\"\r\nioc.feed_name  = \"GreyNoise Intelligence\"\r\n$ip = ioc.ioc_value \r\n$classification = ioc.severity \r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude \r\n$country = if(ioc.location.country_or_region!=\"\", ioc.location.country_or_region, \"-\") \r\nmatch: \r\n    $ip, $classification, $category, $latitude, $longitude, $match_bucket, $country\r\noutcome:\r\n    $hostname = re.replace(re.replace(re.replace(arrays.join_string(array_distinct(ioc.asset.hostname), \",\"), \",,+\", \",\"), \"^,|,$\", \"\"), \"^\\\\s*$|^$\", \"-\")\r\norder:\r\n    $match_bucket desc\r\nlimit:\r\n    10000\r\n",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "f5182588ec06f163cb71ac83bcb71f582bb701aa54ca4f86e751bee42c89e5b6"
+                },
+                {
+                    "name": "c1d81b55-1e38-4767-9313-75afc3090a62",
+                    "query": "ioc.feed_log_type = \"GREYNOISE\"\r\nioc.feed_name  = \"GreyNoise Intelligence\"\r\n$ip = ioc.ioc_value \r\n$classification = ioc.severity \r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude \r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\nmatch:\r\n    $match_bucket, $category\r\noutcome: \r\n    $count = count_distinct(strings.concat($ip, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country))\r\nlimit:\r\n    10000",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "8fe6e3624f4186f1e228f5c6aa66ba797b31f963cd9a560c07676b5ad2ba277a"
+                }
+            ]
+        }
+    ]
+}

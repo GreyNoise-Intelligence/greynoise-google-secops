@@ -1,0 +1,2428 @@
+{
+    "dashboards": [
+        {
+            "dashboard": {
+                "name": "9428e518-539b-4296-823e-84ef7f45903a",
+                "displayName": "GreyNoise Indicator Dashboard",
+                "description": "The Indicator Dashboard provides detailed information about Indicators fetched from GreyNoise.",
+                "definition": {
+                    "filters": [
+                        {
+                            "id": "GlobalTimeFilter",
+                            "dataSource": "GLOBAL",
+                            "filterOperatorAndFieldValues": [
+                                {
+                                    "filterOperator": "PAST",
+                                    "fieldValues": [
+                                        "1",
+                                        "DAY"
+                                    ]
+                                }
+                            ],
+                            "displayName": "Global Time Filter",
+                            "isStandardTimeRangeFilter": true,
+                            "isStandardTimeRangeFilterEnabled": false
+                        },
+                        {
+                            "id": "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                            "dataSource": "ENTITY",
+                            "fieldPath": "graph.metadata.interval.start_time",
+                            "filterOperatorAndFieldValues": [
+                                {
+                                    "filterOperator": "PAST",
+                                    "fieldValues": [
+                                        "1",
+                                        "WEEK"
+                                    ]
+                                }
+                            ],
+                            "displayName": "Indicator Active Time",
+                            "chartIds": [
+                                "c380e335-a038-43bf-9ab7-15e6f656691e",
+                                "9e2d013a-c72c-4645-a524-abb9737564ea",
+                                "156d9dcd-ffd1-4477-af03-48fb2720e13a",
+                                "3f1267d0-b65d-4c39-9140-a6126137f4fb",
+                                "0dd2fd75-57ef-4018-aba8-88a22fc4308a",
+                                "4e7f2270-cb07-452c-918f-6f405fe25d24",
+                                "efe4bd4c-35dc-4edf-bda6-af7c38274d5a",
+                                "4319904a-c67f-40f9-b73a-cd8313e4efc1",
+                                "3a41f14e-7dbd-46cf-87e2-1f23d40ddc1c",
+                                "b42502a6-3fae-4bb6-837d-e97cfc37c464",
+                                "51357e65-2e4e-49b6-b573-1d3d8b969144",
+                                "2528998e-a39c-469a-a234-e5930a95b998",
+                                "0e9b1e28-329a-44e8-aa68-a2cfcb7d2076",
+                                "36e22bc7-6a19-4e03-a1bc-a4a5d93af7d2",
+                                "c721dac5-c11b-4e41-8149-8a09dcb9626a",
+                                "71bde666-5c40-446c-baf2-6087c48c6a1c",
+                                "eb41e19d-2fec-4585-868c-4a379d6ead12",
+                                "2b083ed4-4895-4fac-bea5-7c835a59af53",
+                                "3b61d634-c4da-4500-b2a4-22c4c3895d74",
+                                "c1fde2a8-19b7-4bd8-8b8e-f36a9eaad74a"
+                            ]
+                        },
+                        {
+                            "id": "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                            "dataSource": "ENTITY",
+                            "fieldPath": "graph.entity.ip_geo_artifact.location.country_or_region",
+                            "filterOperatorAndFieldValues": [
+                                {
+                                    "filterOperator": "EQUAL",
+                                    "fieldValues": [
+                                        ""
+                                    ]
+                                }
+                            ],
+                            "displayName": "Country Filter",
+                            "chartIds": [
+                                "c380e335-a038-43bf-9ab7-15e6f656691e",
+                                "9e2d013a-c72c-4645-a524-abb9737564ea",
+                                "156d9dcd-ffd1-4477-af03-48fb2720e13a",
+                                "36e22bc7-6a19-4e03-a1bc-a4a5d93af7d2",
+                                "71bde666-5c40-446c-baf2-6087c48c6a1c",
+                                "c721dac5-c11b-4e41-8149-8a09dcb9626a",
+                                "eb41e19d-2fec-4585-868c-4a379d6ead12",
+                                "3f1267d0-b65d-4c39-9140-a6126137f4fb",
+                                "0dd2fd75-57ef-4018-aba8-88a22fc4308a",
+                                "4e7f2270-cb07-452c-918f-6f405fe25d24",
+                                "efe4bd4c-35dc-4edf-bda6-af7c38274d5a",
+                                "4319904a-c67f-40f9-b73a-cd8313e4efc1",
+                                "3a41f14e-7dbd-46cf-87e2-1f23d40ddc1c",
+                                "b42502a6-3fae-4bb6-837d-e97cfc37c464",
+                                "51357e65-2e4e-49b6-b573-1d3d8b969144",
+                                "2528998e-a39c-469a-a234-e5930a95b998",
+                                "0e9b1e28-329a-44e8-aa68-a2cfcb7d2076",
+                                "2b083ed4-4895-4fac-bea5-7c835a59af53",
+                                "3b61d634-c4da-4500-b2a4-22c4c3895d74",
+                                "c1fde2a8-19b7-4bd8-8b8e-f36a9eaad74a"
+                            ]
+                        },
+                        {
+                            "id": "1e2f491a-03cb-40b8-adf0-de3335a0cd57",
+                            "dataSource": "ENTITY",
+                            "fieldPath": "graph.metadata.threat.threat_verdict",
+                            "filterOperatorAndFieldValues": [
+                                {
+                                    "filterOperator": "EQUAL",
+                                    "fieldValues": [
+                                        ""
+                                    ]
+                                }
+                            ],
+                            "displayName": "Classification Filter",
+                            "chartIds": [
+                                "c380e335-a038-43bf-9ab7-15e6f656691e",
+                                "9e2d013a-c72c-4645-a524-abb9737564ea",
+                                "156d9dcd-ffd1-4477-af03-48fb2720e13a",
+                                "36e22bc7-6a19-4e03-a1bc-a4a5d93af7d2",
+                                "71bde666-5c40-446c-baf2-6087c48c6a1c",
+                                "c721dac5-c11b-4e41-8149-8a09dcb9626a",
+                                "eb41e19d-2fec-4585-868c-4a379d6ead12",
+                                "3f1267d0-b65d-4c39-9140-a6126137f4fb",
+                                "0dd2fd75-57ef-4018-aba8-88a22fc4308a",
+                                "4e7f2270-cb07-452c-918f-6f405fe25d24",
+                                "efe4bd4c-35dc-4edf-bda6-af7c38274d5a",
+                                "4319904a-c67f-40f9-b73a-cd8313e4efc1",
+                                "3a41f14e-7dbd-46cf-87e2-1f23d40ddc1c",
+                                "b42502a6-3fae-4bb6-837d-e97cfc37c464",
+                                "51357e65-2e4e-49b6-b573-1d3d8b969144",
+                                "2528998e-a39c-469a-a234-e5930a95b998",
+                                "0e9b1e28-329a-44e8-aa68-a2cfcb7d2076",
+                                "2b083ed4-4895-4fac-bea5-7c835a59af53",
+                                "3b61d634-c4da-4500-b2a4-22c4c3895d74",
+                                "c1fde2a8-19b7-4bd8-8b8e-f36a9eaad74a"
+                            ]
+                        }
+                    ],
+                    "charts": [
+                        {
+                            "dashboardChart": "b42502a6-3fae-4bb6-837d-e97cfc37c464",
+                            "chartLayout": {
+                                "startX": 32,
+                                "spanX": 32,
+                                "startY": 29,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "4e7f2270-cb07-452c-918f-6f405fe25d24",
+                            "chartLayout": {
+                                "startX": 64,
+                                "spanX": 32,
+                                "startY": 29,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "0dd2fd75-57ef-4018-aba8-88a22fc4308a",
+                            "chartLayout": {
+                                "startX": 32,
+                                "spanX": 32,
+                                "startY": 17,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "0e9b1e28-329a-44e8-aa68-a2cfcb7d2076",
+                            "chartLayout": {
+                                "startX": 64,
+                                "spanX": 32,
+                                "startY": 17,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "156d9dcd-ffd1-4477-af03-48fb2720e13a",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 32,
+                                "startY": 17,
+                                "spanY": 24
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "1c3fb1b3-0fb9-4b69-a69f-91c9b9e1a9e2",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 0,
+                                "spanY": 17
+                            }
+                        },
+                        {
+                            "dashboardChart": "51357e65-2e4e-49b6-b573-1d3d8b969144",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 48,
+                                "startY": 232,
+                                "spanY": 32
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "efe4bd4c-35dc-4edf-bda6-af7c38274d5a",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 89,
+                                "spanY": 28
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "9e2d013a-c72c-4645-a524-abb9737564ea",
+                            "chartLayout": {
+                                "startX": 73,
+                                "spanX": 23,
+                                "startY": 117,
+                                "spanY": 28
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "2528998e-a39c-469a-a234-e5930a95b998",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 300,
+                                "spanY": 25
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "c380e335-a038-43bf-9ab7-15e6f656691e",
+                            "chartLayout": {
+                                "startX": 48,
+                                "spanX": 48,
+                                "startY": 49,
+                                "spanY": 32
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "3f1267d0-b65d-4c39-9140-a6126137f4fb",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 48,
+                                "startY": 49,
+                                "spanY": 32
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "3a41f14e-7dbd-46cf-87e2-1f23d40ddc1c",
+                            "chartLayout": {
+                                "startX": 48,
+                                "spanX": 48,
+                                "startY": 232,
+                                "spanY": 32
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "71bde666-5c40-446c-baf2-6087c48c6a1c",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 145,
+                                "spanY": 28
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "4319904a-c67f-40f9-b73a-cd8313e4efc1",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 73,
+                                "startY": 117,
+                                "spanY": 28
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "c721dac5-c11b-4e41-8149-8a09dcb9626a",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 325,
+                                "spanY": 25
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "36e22bc7-6a19-4e03-a1bc-a4a5d93af7d2",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 350,
+                                "spanY": 25
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "eb41e19d-2fec-4585-868c-4a379d6ead12",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 201,
+                                "spanY": 31
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "2b083ed4-4895-4fac-bea5-7c835a59af53",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 383,
+                                "spanY": 25
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "3b61d634-c4da-4500-b2a4-22c4c3895d74",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 173,
+                                "spanY": 28
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "5d891429-431a-407e-a769-e26bc5b9e319",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 41,
+                                "spanY": 8
+                            }
+                        },
+                        {
+                            "dashboardChart": "ba441beb-2d93-48c5-9f15-3765a4c46712",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 81,
+                                "spanY": 8
+                            }
+                        },
+                        {
+                            "dashboardChart": "2b1c3f05-b2e9-4b0a-87f4-260e7583cb33",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 264,
+                                "spanY": 8
+                            }
+                        },
+                        {
+                            "dashboardChart": "a903d01b-eb5f-4b66-ad05-3dae70ae2b69",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 95,
+                                "startY": 375,
+                                "spanY": 8
+                            }
+                        },
+                        {
+                            "dashboardChart": "c1fde2a8-19b7-4bd8-8b8e-f36a9eaad74a",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 272,
+                                "spanY": 28
+                            },
+                            "filtersIds": [
+                                "889f0dc4-b66f-42ee-9acd-bb76bab14b58",
+                                "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                "1e2f491a-03cb-40b8-adf0-de3335a0cd57"
+                            ]
+                        }
+                    ]
+                },
+                "type": "CUSTOM",
+                "etag": "3db1ceb44b8200874d13f93234fac96613a1366b31e4ecf4b83fc645031c7bab",
+                "access": "DASHBOARD_PRIVATE"
+            },
+            "dashboardCharts": [
+                {
+                    "name": "0e9b1e28-329a-44e8-aa68-a2cfcb7d2076",
+                    "displayName": "UNKNOWN IP ADDRESSES IN GREYNOISE",
+                    "description": "Count of IPs with no definitive classification.",
+                    "chartDatasource": {
+                        "dashboardQuery": "07e73d0e-eb68-45b5-a234-066e4954e241",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "Unknown IP Addresses in GreyNoise",
+                                "field": "unknown_count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off",
+                        "thresholdColoringEnabled": true,
+                        "visualMaps": [
+                            {
+                                "visualMapType": "PIECEWISE",
+                                "pieces": [
+                                    {
+                                        "min": "0",
+                                        "max": "1000000000000000000",
+                                        "color": "#1a73e8"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "375965d878f2748e875403487310f6fdf8b06430f9c2cfaa6d233ed9c32fa4c5",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "3b61d634-c4da-4500-b2a4-22c4c3895d74",
+                    "displayName": "TOP 10 TAGS",
+                    "description": "Top tags (e.g., Web Crawler, Mirai) identified by GreyNoise.",
+                    "chartDatasource": {
+                        "dashboardQuery": "96fb5157-a97c-4b4e-a900-55d09848c5ed",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesName": "none",
+                                "seriesType": "BAR",
+                                "encode": {
+                                    "x": "tag",
+                                    "y": "count"
+                                },
+                                "dataLabel": {},
+                                "itemStyle": {
+                                    "color": "#923ef9"
+                                },
+                                "seriesUniqueValue": "none"
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "CATEGORY",
+                                "displayName": "TAGS"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "LOG",
+                                "displayName": "COUNT"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off",
+                        "thresholdColoringEnabled": true,
+                        "visualMaps": [
+                            {
+                                "visualMapType": "PIECEWISE",
+                                "pieces": [
+                                    {
+                                        "min": "0",
+                                        "max": "15000",
+                                        "color": "#1a73e8"
+                                    },
+                                    {
+                                        "min": "15001",
+                                        "max": "25000",
+                                        "color": "#eb730a"
+                                    },
+                                    {
+                                        "min": "25001",
+                                        "max": "40000",
+                                        "color": "#10a3b7"
+                                    },
+                                    {
+                                        "min": "40001",
+                                        "max": "70000",
+                                        "color": "#ec453b"
+                                    },
+                                    {
+                                        "min": "70001",
+                                        "color": "#e51f8f"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "e4cde89352d7807c897810c116d2b144fb72f0477120b537049e466959c96a3f",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "c1fde2a8-19b7-4bd8-8b8e-f36a9eaad74a",
+                    "displayName": "MANUALLY QUERIED INDICATORS [DRILLDOWN]",
+                    "description": "Displays indicators that were manually investigated by users.",
+                    "chartDatasource": {
+                        "dashboardQuery": "d3b3eabf-9021-4df4-88c9-8a1e6f0d0109",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "columnDefs": [
+                            {
+                                "field": "ip",
+                                "header": "IP"
+                            },
+                            {
+                                "field": "threat_verdict",
+                                "header": "CLASSIFICATION "
+                            },
+                            {
+                                "field": "description",
+                                "header": "DESCRIPTION"
+                            },
+                            {
+                                "field": "greynoise_link",
+                                "header": "GREYNOISE LINK"
+                            },
+                            {
+                                "field": "bussiness_found",
+                                "header": "IS BUSINESS SERVICE?"
+                            },
+                            {
+                                "field": "source_country",
+                                "header": "SOURCE COUNTY"
+                            },
+                            {
+                                "field": "organization",
+                                "header": "ORGANIZATION"
+                            },
+                            {
+                                "field": "trust",
+                                "header": "TRUST LEVEL"
+                            },
+                            {
+                                "field": "actor",
+                                "header": "ACTOR"
+                            },
+                            {
+                                "field": "asn",
+                                "header": "ASN"
+                            },
+                            {
+                                "field": "last_seen",
+                                "header": "LAST SEEN"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "27816addb541569dd7ae70587262c50018159f9f097c082c5f2d54e5166c5f6a",
+                    "drillDownConfig": {
+                        "leftDrillDowns": [
+                            {
+                                "id": "C3020C44-DCE6-4FE6-B22C-365077CB4A8B",
+                                "displayName": "IP",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "leftClickColumn": "ip",
+                                    "query": {
+                                        "query": "principal.ip = ${ip} OR target.ip = ${ip}"
+                                    }
+                                }
+                            },
+                            {
+                                "id": "43C09223-5F18-4694-8C8E-44140160FD59",
+                                "displayName": "REDIRECT TO GREYNOISE",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "leftClickColumn": "greynoise_link",
+                                    "externalLink": {
+                                        "link": "${greynoise_link}"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "2b083ed4-4895-4fac-bea5-7c835a59af53",
+                    "displayName": "IPS OVER TIME (INGESTED INDICATORS TREND)",
+                    "description": "Trend of ingested GreyNoise indicators over time, grouped by classification (malicious, suspicious, benign, unknown).  ",
+                    "chartDatasource": {
+                        "dashboardQuery": "05258064-f6bb-4c41-9162-748cdcfb9ce3",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesName": "SUSPICIOUS",
+                                "seriesType": "BAR",
+                                "encode": {
+                                    "x": "date",
+                                    "y": "count"
+                                },
+                                "dataLabel": {},
+                                "itemStyle": {
+                                    "color": "#0c67df"
+                                },
+                                "seriesUniqueValue": "SUSPICIOUS"
+                            },
+                            {
+                                "seriesName": "THREAT_VERDICT_UNSPECIFIED",
+                                "seriesType": "BAR",
+                                "encode": {
+                                    "x": "date",
+                                    "y": "count"
+                                },
+                                "dataLabel": {},
+                                "itemStyle": {
+                                    "color": "#eb730a"
+                                },
+                                "seriesUniqueValue": "THREAT_VERDICT_UNSPECIFIED"
+                            },
+                            {
+                                "seriesName": "MALICIOUS",
+                                "seriesType": "BAR",
+                                "encode": {
+                                    "x": "date",
+                                    "y": "count"
+                                },
+                                "dataLabel": {},
+                                "itemStyle": {
+                                    "color": "#10a3b7"
+                                },
+                                "seriesUniqueValue": "MALICIOUS"
+                            },
+                            {
+                                "seriesName": "UNDETECTED",
+                                "seriesType": "BAR",
+                                "encode": {
+                                    "x": "date",
+                                    "y": "count"
+                                },
+                                "dataLabel": {},
+                                "itemStyle": {
+                                    "color": "#d93025"
+                                },
+                                "seriesUniqueValue": "UNDETECTED"
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "CATEGORY",
+                                "displayName": "DATE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "LOG",
+                                "displayName": "COUNT"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "top": 12,
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "seriesColumn": [
+                            "verdict"
+                        ],
+                        "groupingType": "Grouped"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "f3353e96339b09a78181ffb96ce090762f641e28dab19982a6c6f86008e3f32f",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "2b1c3f05-b2e9-4b0a-87f4-260e7583cb33",
+                    "displayName": "markdown",
+                    "visualization": {
+                        "markdown": {
+                            "content": "## Detailed Tables\n---\nComprehensive tables for in-depth analysis. Drill down into individual IP indicators, CVE associations, and manually queried IPs.",
+                            "properties": {
+                                "backgroundColor": "transparent"
+                            }
+                        }
+                    },
+                    "tileType": "TILE_TYPE_MARKDOWN",
+                    "etag": "7b46be396b725013d4ccbd4e5208d22626ecae6c1e1b095a70568ad1557c072d"
+                },
+                {
+                    "name": "3a41f14e-7dbd-46cf-87e2-1f23d40ddc1c",
+                    "displayName": "TOP 10 ORGANIZATIONS",
+                    "description": "Top organizations (ISPs/Hosting Providers) associated with observed IPs.",
+                    "chartDatasource": {
+                        "dashboardQuery": "8d39c802-ff92-49e2-84e2-b91c23253c50",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "PIE",
+                                "encode": {
+                                    "value": "count",
+                                    "itemName": "organization"
+                                },
+                                "dataLabel": {
+                                    "show": true
+                                },
+                                "radius": [
+                                    "0%",
+                                    "70%"
+                                ],
+                                "itemStyle": {
+                                    "color": "b=>{const {map:c}=Cyf(this.theme);b=Jzf(b,bzf(this.form.controls.seriesConfig.getRawValue()),a);a=b.nextColorIndex;let d;return(d=\nc.get(b.color))!=null?d:b.color}"
+                                },
+                                "itemColors": {
+                                    "colors": [
+                                        {
+                                            "key": "Mobile Communication Company of Iran PLC",
+                                            "value": {
+                                                "color": "#1a73e8",
+                                                "label": "Mobile Communication Company of Iran PLC"
+                                            }
+                                        },
+                                        {
+                                            "key": "Iran Telecommunication Company PJS",
+                                            "value": {
+                                                "color": "#eb730a",
+                                                "label": "Iran Telecommunication Company PJS"
+                                            }
+                                        },
+                                        {
+                                            "key": "Iran Cell Service and Communication Company",
+                                            "value": {
+                                                "color": "#10a3b7",
+                                                "label": "Iran Cell Service and Communication Company"
+                                            }
+                                        },
+                                        {
+                                            "key": "CHINANET-BACKBONE",
+                                            "value": {
+                                                "color": "#ec453b",
+                                                "label": "CHINANET-BACKBONE"
+                                            }
+                                        },
+                                        {
+                                            "key": "CHINA UNICOM China169 Backbone",
+                                            "value": {
+                                                "color": "#e51f8f",
+                                                "label": "CHINA UNICOM China169 Backbone"
+                                            }
+                                        },
+                                        {
+                                            "key": "Cloudflare, Inc.",
+                                            "value": {
+                                                "color": "#923ef9",
+                                                "label": "Cloudflare, Inc."
+                                            }
+                                        },
+                                        {
+                                            "key": "DigitalOcean, LLC",
+                                            "value": {
+                                                "color": "#4aa207",
+                                                "label": "DigitalOcean, LLC"
+                                            }
+                                        },
+                                        {
+                                            "key": "National Internet Backbone",
+                                            "value": {
+                                                "color": "#5350fb",
+                                                "label": "National Internet Backbone"
+                                            }
+                                        },
+                                        {
+                                            "key": "Amazon.com, Inc.",
+                                            "value": {
+                                                "color": "#009886",
+                                                "label": "Amazon.com, Inc."
+                                            }
+                                        },
+                                        {
+                                            "key": "PJSC Rostelecom",
+                                            "value": {
+                                                "color": "#6f7585",
+                                                "label": "PJSC Rostelecom"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "right": 12,
+                                "legendOrient": "VERTICAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "7fcfa9ec000b9a0acf998f3a79e11a660e8b19717ca253aa1d1b9c57cbb5ec39",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "1c3fb1b3-0fb9-4b69-a69f-91c9b9e1a9e2",
+                    "displayName": "markdown",
+                    "visualization": {
+                        "markdown": {
+                            "content": "# ![GreyNoise Logo](https://files.readme.io/9ed004a-small-greynoisegreytrans.png) GreyNoise Threat Intelligence Indicator Dashboard\n---\n### This dashboard provides visibility into Internet-wide scan and attack activity using GreyNoise threat intelligence. It helps security teams:\n\n1. Identify Threats: View malicious and suspicious IPs actively scanning or attacking the Internet.\n1. Analyze Trends: Monitor indicator ingestion over time, top threat actors, and CVEs.\n1. Investigate IPs: Drill down into detailed indicator tables with direct links to GreyNoise for further analysis.\n",
+                            "properties": {
+                                "backgroundColor": "transparent"
+                            }
+                        }
+                    },
+                    "tileType": "TILE_TYPE_MARKDOWN",
+                    "etag": "0e50a833ada74c9af5250262a0ede5cc064b09667491bbe886f55c9457cf811d"
+                },
+                {
+                    "name": "efe4bd4c-35dc-4edf-bda6-af7c38274d5a",
+                    "displayName": "TOP 10 ASNS",
+                    "description": "Top 10 ASNs (network providers) associated with observed IPs",
+                    "chartDatasource": {
+                        "dashboardQuery": "7be69620-aa57-4359-ac9d-b676121c7988",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesName": "none",
+                                "seriesType": "BAR",
+                                "encode": {
+                                    "x": "asn",
+                                    "y": "count"
+                                },
+                                "dataLabel": {},
+                                "itemStyle": {
+                                    "color": "#1a73e8"
+                                },
+                                "seriesUniqueValue": "none"
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "CATEGORY",
+                                "displayName": "ASN"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "LOG",
+                                "displayName": "COUNT"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off",
+                        "thresholdColoringEnabled": true,
+                        "visualMaps": [
+                            {
+                                "visualMapType": "PIECEWISE",
+                                "pieces": [
+                                    {
+                                        "min": "0",
+                                        "max": "2000",
+                                        "color": "#1a73e8"
+                                    },
+                                    {
+                                        "min": "5001",
+                                        "max": "10000",
+                                        "color": "#eb730a"
+                                    },
+                                    {
+                                        "min": "10001",
+                                        "max": "20000",
+                                        "color": "#10a3b7"
+                                    },
+                                    {
+                                        "min": "20001",
+                                        "max": "50000",
+                                        "color": "#ec453b"
+                                    },
+                                    {
+                                        "min": "50001",
+                                        "max": "100000",
+                                        "color": "#e51f8f"
+                                    },
+                                    {
+                                        "min": "100001",
+                                        "max": "1000000",
+                                        "color": "#923ef9"
+                                    },
+                                    {
+                                        "min": "2001",
+                                        "max": "5000",
+                                        "color": "#4aa207"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "7fa1ea0f917a6d94025a1951c7a714e03b366f42291ed851412dbbcec9b30676",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "eb41e19d-2fec-4585-868c-4a379d6ead12",
+                    "displayName": "TOP 10 BUSINESS SERVICE CATEGORIES",
+                    "description": "Top 10 categories for Business Services (e.g., CDN, Search Engine).",
+                    "chartDatasource": {
+                        "dashboardQuery": "2cfa89eb-7f5f-4540-a24d-caeea9fec7d8",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesName": "none",
+                                "seriesType": "BAR",
+                                "encode": {
+                                    "x": "category",
+                                    "y": "count"
+                                },
+                                "dataLabel": {},
+                                "itemStyle": {
+                                    "color": "#1a73e8"
+                                },
+                                "seriesUniqueValue": "none"
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "CATEGORY",
+                                "displayName": "BUSINESS SERVICE CATEGORY"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "LOG",
+                                "displayName": "COUNT"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off",
+                        "thresholdColoringEnabled": true,
+                        "visualMaps": [
+                            {
+                                "visualMapType": "PIECEWISE",
+                                "pieces": [
+                                    {
+                                        "min": "0",
+                                        "max": "1000",
+                                        "color": "#009886"
+                                    },
+                                    {
+                                        "min": "1001",
+                                        "max": "10000",
+                                        "color": "#5350fb"
+                                    },
+                                    {
+                                        "min": "10001",
+                                        "max": "100000",
+                                        "color": "#ec453b"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "b7c871c872a5bda1ff79d3b31cfbcf9f0531699295758c16335f0b0cfd631bce",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "2528998e-a39c-469a-a234-e5930a95b998",
+                    "displayName": "BUSINESS SERVICE IP INTELLIGENCE [DRILLDOWN]",
+                    "description": "List of IP addresses identified as Business Services, including service category, trust level, and descriptive context.",
+                    "chartDatasource": {
+                        "dashboardQuery": "086244b9-55b5-4b0d-a0bc-368552521ead",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "columnDefs": [
+                            {
+                                "field": "ip",
+                                "header": "IP"
+                            },
+                            {
+                                "field": "category",
+                                "header": "CATEGORY"
+                            },
+                            {
+                                "field": "name",
+                                "header": "NAME"
+                            },
+                            {
+                                "field": "trust_level",
+                                "header": "TRUST LEVEL"
+                            },
+                            {
+                                "field": "summary",
+                                "header": "SUMMARY"
+                            },
+                            {
+                                "field": "description",
+                                "header": "DESCRIPTION"
+                            },
+                            {
+                                "field": "reference",
+                                "header": "REFERENCE"
+                            },
+                            {
+                                "field": "last_seen",
+                                "header": "LAST SEEN"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "68024099208710a647109a9b5811d7e583a051db94f7ff4b670092c8e6f7e555",
+                    "drillDownConfig": {
+                        "leftDrillDowns": [
+                            {
+                                "id": "9013C4EC-F124-4C3D-AE78-3FB53B7A7598",
+                                "displayName": "IP",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "leftClickColumn": "ip",
+                                    "query": {
+                                        "query": "principal.ip = ${ip} OR target.ip = ${ip}"
+                                    }
+                                }
+                            },
+                            {
+                                "id": "3291EFBA-1360-4403-A5C8-E5C2BD388894",
+                                "displayName": "Reference Link",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "leftClickColumn": "reference",
+                                    "externalLink": {
+                                        "link": "${reference}"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "36e22bc7-6a19-4e03-a1bc-a4a5d93af7d2",
+                    "displayName": "CVE DISTRIBUTION",
+                    "description": "CVEs associated with observed IPs.",
+                    "chartDatasource": {
+                        "dashboardQuery": "022800f2-fb80-45d0-95d1-8f19f464c8a8",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "columnDefs": [
+                            {
+                                "field": "cve",
+                                "header": "CVE"
+                            },
+                            {
+                                "field": "count",
+                                "header": "COUNT"
+                            },
+                            {
+                                "field": "affected_ips",
+                                "header": "AFFECTED IPs"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "b5884f59058a98f4bda6277fbc162b13d79b7c113f7f0c4da7459cec2970f601",
+                    "drillDownConfig": {
+                        "leftDrillDowns": [
+                            {
+                                "id": "ABADCE82-1D75-4B24-9C0C-5F9B47DF7CB9",
+                                "displayName": "Get List of IPs ",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "leftClickColumn": "affected_ips",
+                                    "query": {
+                                        "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\n$cve = graph.entity.asset.vulnerabilities.cve_id\r\n$cve = ${cve}\r\n$ip = graph.entity.ip\r\nmatch:\r\n    $ip\r\nlimit:\r\n    100"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "156d9dcd-ffd1-4477-af03-48fb2720e13a",
+                    "displayName": "UNIQUE IP ADDRESSES IN GREYNOISE",
+                    "description": "Count of distinct IP addresses in GreyNoise intelligence data",
+                    "chartDatasource": {
+                        "dashboardQuery": "3f24c0a5-3ac4-49b0-a800-53d0c5a169ab",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "Unique  IP Addresses in GreyNoise",
+                                "field": "all_counts",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "39a8e9986a626a85feb8c745ff8c2e9da1d50df712e1a54c000267222279ab35",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "a903d01b-eb5f-4b66-ad05-3dae70ae2b69",
+                    "displayName": "markdown",
+                    "visualization": {
+                        "markdown": {
+                            "content": "## Trends\n---\nMonitor indicator ingestion patterns over time. Track changes in threat activity and identify anomalies or spikes in specific classifications.",
+                            "properties": {
+                                "backgroundColor": "transparent"
+                            }
+                        }
+                    },
+                    "tileType": "TILE_TYPE_MARKDOWN",
+                    "etag": "a0767814a25a5c16ae4c4c93b0bf9f1036a3ce6026448f109eb015c0c795fc53"
+                },
+                {
+                    "name": "9e2d013a-c72c-4645-a524-abb9737564ea",
+                    "displayName": "TOP 10 OS",
+                    "description": "Top Operating Systems detected on source IPs.",
+                    "chartDatasource": {
+                        "dashboardQuery": "91ad42b7-878e-4257-90e4-b6061a1d7841",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "PIE",
+                                "encode": {
+                                    "value": "count",
+                                    "itemName": "os"
+                                },
+                                "dataLabel": {
+                                    "show": true
+                                },
+                                "radius": [
+                                    "0%",
+                                    "70%"
+                                ],
+                                "itemStyle": {
+                                    "color": "b=>{const {map:c}=bDf(this.theme);b=iEf(b,BDf(this.form.controls.seriesConfig.getRawValue()),a);a=b.nextColorIndex;let d;return(d=\nc.get(b.color))!=null?d:b.color}"
+                                },
+                                "itemColors": {
+                                    "colors": [
+                                        {
+                                            "key": "Windows 10",
+                                            "value": {
+                                                "color": "#1a73e8",
+                                                "label": "Windows 10"
+                                            }
+                                        },
+                                        {
+                                            "key": "Windows Server 2019",
+                                            "value": {
+                                                "color": "#eb730a",
+                                                "label": "Windows Server 2019"
+                                            }
+                                        },
+                                        {
+                                            "key": "Linux 5.x",
+                                            "value": {
+                                                "color": "#ec453b",
+                                                "label": "Linux 5.x"
+                                            }
+                                        },
+                                        {
+                                            "key": "CentOS",
+                                            "value": {
+                                                "color": "#10a3b7",
+                                                "label": "CentOS"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "top": 12,
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "b51368a3172140ef728ba91e125274b0e977315741f66a7df900c42dbef85bd0",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "c380e335-a038-43bf-9ab7-15e6f656691e",
+                    "displayName": "BUSINESS SERVICE IPS BY TRUST LEVEL",
+                    "description": "Distribution of known business services by trust level (1=High Trust, 2=Medium Trust)",
+                    "chartDatasource": {
+                        "dashboardQuery": "fbe5dcf6-99d5-4e6c-95b3-50854845979d",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "PIE",
+                                "encode": {
+                                    "value": "count",
+                                    "itemName": "trust_level"
+                                },
+                                "dataLabel": {
+                                    "show": true
+                                },
+                                "radius": [
+                                    "0%",
+                                    "70%"
+                                ],
+                                "itemStyle": {
+                                    "color": "b=>{const {map:c}=bDf(this.theme);b=iEf(b,BDf(this.form.controls.seriesConfig.getRawValue()),a);a=b.nextColorIndex;let d;return(d=\nc.get(b.color))!=null?d:b.color}"
+                                },
+                                "itemColors": {
+                                    "colors": [
+                                        {
+                                            "key": "1",
+                                            "value": {
+                                                "color": "#145CBD",
+                                                "label": "TRUST LEVEL 1"
+                                            }
+                                        },
+                                        {
+                                            "key": "2",
+                                            "value": {
+                                                "color": "#BB590B",
+                                                "label": "TRUST LEVEL 2"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "top": 12,
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "c054f286af38786d3342f14887bc8ebb160b490610c9fc1b5072e014ef0bde27",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "4319904a-c67f-40f9-b73a-cd8313e4efc1",
+                    "displayName": "TOP 10 SOURCE COUNTRIES [DRILLDOWN]",
+                    "description": "Top source countries of origin for the identified IPs.  ",
+                    "chartDatasource": {
+                        "dashboardQuery": "3631e426-9f58-45d2-97bd-430d62bb0d6e",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesName": "none",
+                                "seriesType": "BAR",
+                                "encode": {
+                                    "x": "country",
+                                    "y": "count"
+                                },
+                                "dataLabel": {},
+                                "itemStyle": {
+                                    "color": "#145CBD"
+                                },
+                                "seriesUniqueValue": "none"
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "CATEGORY",
+                                "displayName": "SOURCE COUNTRY"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE",
+                                "displayName": "COUNT"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "9a63c94a1b96b0acb87808cf33476aed8f1f131c91c901d9f07891825297c039",
+                    "drillDownConfig": {
+                        "leftDrillDowns": [
+                            {
+                                "id": "E86FF648-455F-4A4F-8B81-AC16DFAE4DB1",
+                                "displayName": "Filter by Country",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "filter": {
+                                        "dashboardFilters": [
+                                            {
+                                                "dashboardFilterId": "2cfc5192-3fa3-4375-86ea-636b0c6d99a1",
+                                                "filterOperatorAndValues": [
+                                                    {
+                                                        "filterOperator": "EQUAL",
+                                                        "fieldValues": [
+                                                            "${country}"
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "5d891429-431a-407e-a769-e26bc5b9e319",
+                    "displayName": "markdown",
+                    "visualization": {
+                        "markdown": {
+                            "content": "## Classification Distribution\n---\nOverview of IP classifications and trust levels. Use these charts to understand the threat landscape and identify the proportion of malicious vs benign traffic.",
+                            "properties": {
+                                "backgroundColor": "transparent"
+                            }
+                        }
+                    },
+                    "tileType": "TILE_TYPE_MARKDOWN",
+                    "etag": "e1704820214a452bd9d41a009f42edc942110650ce08a8fd511726136204ce8f"
+                },
+                {
+                    "name": "0dd2fd75-57ef-4018-aba8-88a22fc4308a",
+                    "displayName": "BENIGN IP ADDRESSES IN GREYNOISE",
+                    "description": "Count of IPs classified as 'benign' (harmless scanners or known services).",
+                    "chartDatasource": {
+                        "dashboardQuery": "773c77f7-537f-4745-a994-0440ca5803e0",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "Benign IP Addresses in GreyNoise",
+                                "field": "benign_count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off",
+                        "thresholdColoringEnabled": true,
+                        "visualMaps": [
+                            {
+                                "visualMapType": "PIECEWISE",
+                                "pieces": [
+                                    {
+                                        "min": "0",
+                                        "max": "1000000000000000000",
+                                        "color": "#058298"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "be0651999bfb3a711d45ddc4a101a5b1c2ec55d171b114f98160c1d8fd2ea4e7",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "b42502a6-3fae-4bb6-837d-e97cfc37c464",
+                    "displayName": "SUSPICIOUS IP ADDRESSES IN GREYNOISE",
+                    "description": "Count of IPs classified as 'SUSPICIOUS' by GreyNoise Internet Scanner Intelligence.",
+                    "chartDatasource": {
+                        "dashboardQuery": "185979e0-4ba0-4f3a-b01f-f63984704a09",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "Suspicious IP Addresses in GreyNoise",
+                                "field": "count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE_AND_PERCENTAGE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off",
+                        "thresholdColoringEnabled": true,
+                        "visualMaps": [
+                            {
+                                "visualMapType": "PIECEWISE",
+                                "pieces": [
+                                    {
+                                        "min": "1",
+                                        "max": "1000000000000000000",
+                                        "color": "#eb730a"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "bf96b767031f1ba4c11da9c5e04e9cbb607242e797faf96b8a88a3352c2733ce",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "51357e65-2e4e-49b6-b573-1d3d8b969144",
+                    "displayName": "TOP 10 ACTORS",
+                    "description": "Top threat actors (e.g., Mirai, Cobalt Strike) identified by GreyNoise.",
+                    "chartDatasource": {
+                        "dashboardQuery": "e52c1842-9210-4dd1-9942-38def0bdda24",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "PIE",
+                                "encode": {
+                                    "value": "count",
+                                    "itemName": "actor"
+                                },
+                                "dataLabel": {
+                                    "show": true
+                                },
+                                "radius": [
+                                    "0%",
+                                    "70%"
+                                ],
+                                "itemStyle": {
+                                    "color": "b=>{const {map:c}=Cyf(this.theme);b=Jzf(b,bzf(this.form.controls.seriesConfig.getRawValue()),a);a=b.nextColorIndex;let d;return(d=\nc.get(b.color))!=null?d:b.color}"
+                                },
+                                "itemColors": {
+                                    "colors": [
+                                        {
+                                            "key": "Cortex Xpanse",
+                                            "value": {
+                                                "color": "#1a73e8",
+                                                "label": "Cortex Xpanse"
+                                            }
+                                        },
+                                        {
+                                            "key": "Stretchoid",
+                                            "value": {
+                                                "color": "#eb730a",
+                                                "label": "Stretchoid"
+                                            }
+                                        },
+                                        {
+                                            "key": "Censys",
+                                            "value": {
+                                                "color": "#10a3b7",
+                                                "label": "Censys"
+                                            }
+                                        },
+                                        {
+                                            "key": "ShadowServer.org",
+                                            "value": {
+                                                "color": "#ec453b",
+                                                "label": "ShadowServer.org"
+                                            }
+                                        },
+                                        {
+                                            "key": "Alpha Strike Labs",
+                                            "value": {
+                                                "color": "#e51f8f",
+                                                "label": "Alpha Strike Labs"
+                                            }
+                                        },
+                                        {
+                                            "key": "GoogleBot",
+                                            "value": {
+                                                "color": "#923ef9",
+                                                "label": "GoogleBot"
+                                            }
+                                        },
+                                        {
+                                            "key": "ONYPHE",
+                                            "value": {
+                                                "color": "#4aa207",
+                                                "label": "ONYPHE"
+                                            }
+                                        },
+                                        {
+                                            "key": "Driftnet",
+                                            "value": {
+                                                "color": "#5350fb",
+                                                "label": "Driftnet"
+                                            }
+                                        },
+                                        {
+                                            "key": "BinaryEdge.io",
+                                            "value": {
+                                                "color": "#009886",
+                                                "label": "BinaryEdge.io"
+                                            }
+                                        },
+                                        {
+                                            "key": "Yandex Search Engine",
+                                            "value": {
+                                                "color": "#6f7585",
+                                                "label": "Yandex Search Engine"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "right": 12,
+                                "legendOrient": "VERTICAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "d43b7ac0d123fe59e1474e1ebee86b73b0fa46bcf32ce64af570bb8e46380fd3",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "3f1267d0-b65d-4c39-9140-a6126137f4fb",
+                    "displayName": "INDICATORS BY CLASSIFICATION [DRILLDOWN]",
+                    "description": "Distribution of IPs by their classification (malicious, suspicious, benign, unknown).",
+                    "chartDatasource": {
+                        "dashboardQuery": "98ba5cf0-aa37-4d56-97ff-46f4c5d68d69",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "PIE",
+                                "encode": {
+                                    "value": "count",
+                                    "itemName": "verdict"
+                                },
+                                "dataLabel": {
+                                    "show": true
+                                },
+                                "radius": [
+                                    "0%",
+                                    "70%"
+                                ],
+                                "itemStyle": {
+                                    "color": "b=>{const {map:c}=bDf(this.theme);b=iEf(b,BDf(this.form.controls.seriesConfig.getRawValue()),a);a=b.nextColorIndex;let d;return(d=\nc.get(b.color))!=null?d:b.color}"
+                                },
+                                "itemColors": {
+                                    "colors": [
+                                        {
+                                            "key": "THREAT_VERDICT_UNSPECIFIED",
+                                            "value": {
+                                                "color": "#145CBD",
+                                                "label": "THREAT_VERDICT_UNSPECIFIED"
+                                            }
+                                        },
+                                        {
+                                            "key": "SUSPICIOUS",
+                                            "value": {
+                                                "color": "#BB590B",
+                                                "label": "SUSPICIOUS"
+                                            }
+                                        },
+                                        {
+                                            "key": "MALICIOUS",
+                                            "value": {
+                                                "color": "#CD2A3A",
+                                                "label": "MALICIOUS"
+                                            }
+                                        },
+                                        {
+                                            "key": "UNDETECTED",
+                                            "value": {
+                                                "color": "#058298",
+                                                "label": "UNDETECTED"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "top": 12,
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "5200d9a82aa371975cd2d57dcd8cad7b3641b8f63448c215f1afff3d46c68d37",
+                    "drillDownConfig": {
+                        "leftDrillDowns": [
+                            {
+                                "id": "D4AEBDF6-D91B-4D7C-ABB0-C4BA0BCC9A03",
+                                "displayName": "Classification Filter",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "filter": {
+                                        "dashboardFilters": [
+                                            {
+                                                "dashboardFilterId": "1e2f491a-03cb-40b8-adf0-de3335a0cd57",
+                                                "filterOperatorAndValues": [
+                                                    {
+                                                        "filterOperator": "EQUAL",
+                                                        "fieldValues": [
+                                                            "${verdict}"
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "ba441beb-2d93-48c5-9f15-3765a4c46712",
+                    "displayName": "markdown",
+                    "visualization": {
+                        "markdown": {
+                            "content": "## Top 10 Analytics\n---\nKey insights into the most prevalent entities in GreyNoise data. Analyze top organizations, threat actors, behavioral tags, ASNs, operating systems, and geographic locations.",
+                            "properties": {
+                                "backgroundColor": "transparent"
+                            }
+                        }
+                    },
+                    "tileType": "TILE_TYPE_MARKDOWN",
+                    "etag": "94dc309c1cc43e1df574d4a2f9bd663d1c7135f4c0e14fac965e63375a7c7676"
+                },
+                {
+                    "name": "c721dac5-c11b-4e41-8149-8a09dcb9626a",
+                    "displayName": "INDICATOR DETAILS (ALL INGESTED IPS) [DRILLDOWN]",
+                    "description": "Displays recently ingested IP indicators with their verdict, summary, and link to GreyNoise.",
+                    "chartDatasource": {
+                        "dashboardQuery": "b093b6aa-a5dc-4355-b034-24617477a10d",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "columnDefs": [
+                            {
+                                "field": "ip",
+                                "header": "IP"
+                            },
+                            {
+                                "field": "threat_verdict",
+                                "header": "THREAT VERDICT"
+                            },
+                            {
+                                "field": "bussiness_found",
+                                "header": "IS BUSINESS SERVICE?"
+                            },
+                            {
+                                "field": "trust",
+                                "header": "TRUST LEVEL"
+                            },
+                            {
+                                "field": "summary",
+                                "header": "SUMMARY"
+                            },
+                            {
+                                "field": "greynoise_link",
+                                "header": "GREYNOISE LINK"
+                            },
+                            {
+                                "field": "all_cves",
+                                "header": "CVES"
+                            },
+                            {
+                                "field": "vpn_Service",
+                                "header": "VPN SERVICE"
+                            },
+                            {
+                                "field": "source_country",
+                                "header": "SOURCE COUNTRY"
+                            },
+                            {
+                                "field": "organization",
+                                "header": "ORGANIZATION"
+                            },
+                            {
+                                "field": "actor",
+                                "header": "ACTOR"
+                            },
+                            {
+                                "field": "asn",
+                                "header": "ASN"
+                            },
+                            {
+                                "field": "bot",
+                                "header": "BOT"
+                            },
+                            {
+                                "field": "tor",
+                                "header": "TOR"
+                            },
+                            {
+                                "field": "last_seen",
+                                "header": "LAST SEEN"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "c08ede58cde93cbac526108a48598fb6ca12a6d91c55e76ac9dfcdfe1a7b78d6",
+                    "drillDownConfig": {
+                        "leftDrillDowns": [
+                            {
+                                "id": "C3020C44-DCE6-4FE6-B22C-365077CB4A8B",
+                                "displayName": "IP",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "leftClickColumn": "ip",
+                                    "query": {
+                                        "query": "principal.ip = ${ip} OR target.ip = ${ip}"
+                                    }
+                                }
+                            },
+                            {
+                                "id": "43C09223-5F18-4694-8C8E-44140160FD59",
+                                "displayName": "REDIRECT TO GREYNOISE",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "leftClickColumn": "greynoise_link",
+                                    "externalLink": {
+                                        "link": "${greynoise_link}"
+                                    }
+                                }
+                            },
+                            {
+                                "id": "30C76E26-E236-48A4-AFB9-A1706A6849BA",
+                                "displayName": "GET RELATED CVES",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "leftClickColumn": "all_cves",
+                                    "query": {
+                                        "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\n$ip = graph.entity.ip\r\n$ip = ${ip}\r\n$cves = graph.entity.asset.vulnerabilities.cve_id\r\nmatch:\r\n    $cves"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "4e7f2270-cb07-452c-918f-6f405fe25d24",
+                    "displayName": "MALICIOUS IP ADDRESSES IN GREYNOISE",
+                    "description": "Count of IPs classified as 'MALICIOUS' by GreyNoise Internet Scanner Intelligence.",
+                    "chartDatasource": {
+                        "dashboardQuery": "c6912a37-acbb-45ae-a3ef-5349a0845087",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "Malicious IP Addresses in GreyNoise",
+                                "field": "malicious_count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off",
+                        "thresholdColoringEnabled": true,
+                        "visualMaps": [
+                            {
+                                "visualMapType": "PIECEWISE",
+                                "pieces": [
+                                    {
+                                        "min": "0",
+                                        "max": "1000000000000000000",
+                                        "color": "#ec453b"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "a74cfd6aea0a52139fd177debfd10d268efbd7670b82f81f9578625fe9067a0f",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "71bde666-5c40-446c-baf2-6087c48c6a1c",
+                    "displayName": "TOP 10 CATEGORIES",
+                    "description": "Top network categories for the identified IPs (e.g., isp, business, education). ",
+                    "chartDatasource": {
+                        "dashboardQuery": "c4a631e7-f3ff-4c88-8b5f-ff4fed096596",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesName": "none",
+                                "seriesType": "BAR",
+                                "encode": {
+                                    "x": "category",
+                                    "y": "count"
+                                },
+                                "dataLabel": {},
+                                "itemStyle": {
+                                    "color": "#1a73e8"
+                                },
+                                "seriesUniqueValue": "none"
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "CATEGORY",
+                                "displayName": "NETWORK CATEGORY"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "LOG",
+                                "displayName": "COUNT"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off",
+                        "thresholdColoringEnabled": true,
+                        "visualMaps": [
+                            {
+                                "visualMapType": "PIECEWISE",
+                                "pieces": [
+                                    {
+                                        "min": "0",
+                                        "max": "1000",
+                                        "color": "#1a73e8"
+                                    },
+                                    {
+                                        "min": "1001",
+                                        "max": "10000",
+                                        "color": "#eb730a"
+                                    },
+                                    {
+                                        "min": "10001",
+                                        "max": "100000",
+                                        "color": "#10a3b7"
+                                    },
+                                    {
+                                        "min": "100001",
+                                        "max": "1000000",
+                                        "color": "#ec453b"
+                                    },
+                                    {
+                                        "min": "1000001",
+                                        "max": "10000000",
+                                        "color": "#e51f8f"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "6f1e79cc42c605ad160f0b2e87bcb73513fd849a9873a0c7ebf44e04685c6317",
+                    "drillDownConfig": {}
+                }
+            ],
+            "dashboardQueries": [
+                {
+                    "name": "96fb5157-a97c-4b4e-a900-55d09848c5ed",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\n$tag = graph.entity.artifact.tags\r\n$tag != \"\"\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $tag\r\noutcome:\r\n    $count = count_distinct($entityid)\r\norder:\r\n    $count desc\r\nlimit:\r\n    10",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "2882590146a726df2cc0a76eb5fcc17c552346342db6172f578a9fd608dd2819"
+                },
+                {
+                    "name": "3f24c0a5-3ac4-49b0-a800-53d0c5a169ab",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\n$verdict = graph.metadata.threat.threat_verdict\r\n$entityid = graph.metadata.product_entity_id\r\noutcome:\r\n    $all_counts = count_distinct($entityid)",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "7d91785dccc2bc15c0b2e603a2fe665e01403d40b0e5c8e7485fc78501f2b2dc"
+                },
+                {
+                    "name": "e52c1842-9210-4dd1-9942-38def0bdda24",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\n$actor = graph.additional.fields[\"internet_scanner_actor\"]\r\n$actor != \"\"\r\n$actor != \"unknown\"\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $actor\r\noutcome:\r\n    $count = count_distinct($entityid)\r\norder:\r\n    $count desc\r\nlimit:\r\n    10",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "11ca2e1c08d8994786336dfb702c43a4e0546b50d93f4cfa3ebcf061a0bae16b"
+                },
+                {
+                    "name": "8d39c802-ff92-49e2-84e2-b91c23253c50",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\n$organization = graph.entity.ip_geo_artifact.network.organization_name\r\n$organization != \"\"\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $organization\r\noutcome:\r\n    $count = count_distinct($entityid)\r\norder:\r\n    $count desc\r\nlimit:\r\n    10",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "7181210141ae7ff3e4a47d908bf03ba56c62fe5fea311cd5655747fdac6d1775"
+                },
+                {
+                    "name": "d3b3eabf-9021-4df4-88c9-8a1e6f0d0109",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\n$ip = graph.entity.ip\r\n$threat_verdict = graph.metadata.threat.threat_verdict\r\n$description = graph.metadata.threat.summary\r\n$greynoise_link = graph.metadata.threat.url_back_to_product\r\n$is_live_investigation = graph.additional.fields[\"is_live_investigation\"]\r\n$is_live_investigation = \"true\"\r\n$source_country = if(graph.entity.ip_geo_artifact.location.country_or_region !=\"\", graph.entity.ip_geo_artifact.location.country_or_region, \"-\")\r\n$organization = if(graph.entity.ip_geo_artifact.network.organization_name!=\"\", graph.entity.ip_geo_artifact.network.organization_name, \"-\")\r\n$time = timestamp.get_timestamp(graph.metadata.collected_timestamp.seconds, \"%Y-%m-%d %H:%M:%S\")\r\n$bussiness_found = strings.to_upper(graph.additional.fields[\"business_service_found\"])\r\n$trust = if(graph.metadata.threat.detection_fields[\"business_service_trust_level\"] !=\"\", graph.metadata.threat.detection_fields[\"business_service_trust_level\"], \"-\")\r\n$actor= strings.to_upper(if(graph.additional.fields[\"internet_scanner_actor\"]!=\"\",graph.additional.fields[\"internet_scanner_actor\"],\"-\"))\r\n$asn = if(graph.entity.ip_geo_artifact.network.asn!=\"\",graph.entity.ip_geo_artifact.network.asn, \"-\")\r\nmatch:\r\n    $ip, $threat_verdict, $description, $greynoise_link, $bussiness_found, $source_country, $organization, $trust, $actor, $asn\r\noutcome:\r\n    $last_seen = window.last(graph.metadata.collected_timestamp.seconds, $time)\r\norder:\r\n    $last_seen desc\r\nlimit:\r\n    10000\r\n",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "10e2c3ce0929aada03d75dfd85c3b841458fd93dfa90165b8e39d7e5656c2cc5"
+                },
+                {
+                    "name": "7be69620-aa57-4359-ac9d-b676121c7988",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\n$asn = graph.entity.ip_geo_artifact.network.asn\r\n$asn != \"\"\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $asn\r\noutcome:\r\n    $count = count_distinct($entityid)\r\norder:\r\n    $count desc\r\nlimit:\r\n    10",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "306fdd02ba579db3de7e9efcf421bd09fa93f73bcf2380c1eb5b0821bcbb7c5b"
+                },
+                {
+                    "name": "05258064-f6bb-4c41-9162-748cdcfb9ce3",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\n$date = timestamp.get_timestamp(graph.metadata.interval.start_time.seconds, \"%Y-%m-%d\")\r\n$verdict = graph.metadata.threat.threat_verdict\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $date, $verdict\r\noutcome:\r\n    $count = count_distinct($entityid)\r\norder:\r\n    $date asc\r\nlimit:\r\n    10000",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "403995eb2d36fda6246bee1403bdeec0bc6b46ebd2eb9604849c05dab977fdd7"
+                },
+                {
+                    "name": "185979e0-4ba0-4f3a-b01f-f63984704a09",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.threat.threat_verdict = \"SUSPICIOUS\"\r\n$entityid = graph.metadata.product_entity_id\r\noutcome:\r\n    $count = count_distinct($entityid)",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "11b87b9bbf27ea8199972a86037372a72eb142d9cc8eb4fb2a9efbd72204632a"
+                },
+                {
+                    "name": "fbe5dcf6-99d5-4e6c-95b3-50854845979d",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\n$ip = graph.metadata.product_entity_id \r\n$business_service_found = graph.additional.fields[\"business_service_found\"]\r\n$business_service_found = \"true\"\r\n$trust_level = graph.metadata.threat.detection_fields[\"business_service_trust_level\"]\r\n$trust_level != \"\"\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $trust_level\r\noutcome:\r\n    $count = count_distinct($entityid)\r\norder:\r\n    $trust_level asc",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "1c03c259f5c3bec9c2bfc4b27751cd789fde2cff3645e8fd3f67d5e886592506"
+                },
+                {
+                    "name": "3631e426-9f58-45d2-97bd-430d62bb0d6e",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\n$country = graph.entity.ip_geo_artifact.location.country_or_region\r\n$country != \"\"\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $country\r\noutcome:\r\n    $count = count_distinct($entityid)\r\norder:\r\n    $count desc\r\nlimit:\r\n    10",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "32c595ba424227877d776f95c2e3fbb79c1f15d4ba8dd0216cb8c1f2b2f15773"
+                },
+                {
+                    "name": "086244b9-55b5-4b0d-a0bc-368552521ead",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\ngraph.additional.fields[\"business_service_found\"] = \"true\"\r\n$ip = graph.entity.ip\r\n$trust_level = graph.metadata.threat.detection_fields[\"business_service_trust_level\"]\r\n$category = graph.metadata.threat.category_details\r\n$description = graph.metadata.description\r\n$summary = graph.metadata.threat.summary\r\n$name = graph.additional.fields[\"business_service_name\"]\r\n$reference = if(graph.additional.fields[\"business_service_reference\"]!=\"\", graph.additional.fields[\"business_service_reference\"],\"-\")\r\n$last_seen = graph.additional.fields[\"business_service_last_updated\"]\r\nmatch:\r\n    $ip, $category, $name, $trust_level, $summary, $description, $reference, $last_seen\r\norder:\r\n    $last_seen desc\r\nlimit:\r\n    10000",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "d7c92728061c8072c9c7c0d469b430d26245d255a1bb07971891f0253ac1312c"
+                },
+                {
+                    "name": "022800f2-fb80-45d0-95d1-8f19f464c8a8",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\n$cve = graph.entity.asset.vulnerabilities.cve_id\r\n$cve != \"\"\r\n$ip = graph.entity.ip\r\nmatch:\r\n    $cve\r\noutcome:\r\n    $count = count_distinct($ip)\r\n    $affected_ips = array_distinct($ip)\r\norder:\r\n    $count desc\r\nlimit:\r\n    10000",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "cb7f1ce3096748b07920d366791218313ed18ca205c22d56438117be0f770efb"
+                },
+                {
+                    "name": "98ba5cf0-aa37-4d56-97ff-46f4c5d68d69",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\n$verdict = graph.metadata.threat.threat_verdict\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $verdict\r\noutcome:\r\n    $count = count_distinct($entityid)\r\norder:\r\n    $count desc",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "637160f7ad7b3cc2e33f41c7914d3ebb712035bfadc835f32e577a14e0d994d7"
+                },
+                {
+                    "name": "91ad42b7-878e-4257-90e4-b6061a1d7841",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\n$os = graph.additional.fields[\"os\"]\r\n$os != \"\"\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $os\r\noutcome:\r\n    $count = count_distinct($entityid)\r\norder:\r\n    $count desc\r\nlimit:\r\n    10",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "4888da502762990225a1bb21f2a3949aa8eb916270c145da47a625c0bc76802a"
+                },
+                {
+                    "name": "b093b6aa-a5dc-4355-b034-24617477a10d",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\n$ip = graph.entity.ip\r\n$threat_verdict = graph.metadata.threat.threat_verdict\r\n$summary = graph.metadata.threat.summary\r\n$greynoise_link = graph.metadata.threat.url_back_to_product\r\n$bot = strings.to_upper(graph.metadata.threat.detection_fields[\"bot\"])\r\n$tor = strings.to_upper(graph.metadata.threat.detection_fields[\"tor\"])\r\n$vpn_Service = if(graph.metadata.threat.detection_fields[\"vpn\"]= \"true\", graph.metadata.threat.detection_fields[\"vpn_service\"], \"-\")\r\n$source_country = graph.entity.ip_geo_artifact.location.country_or_region\r\n$organization = if(graph.entity.ip_geo_artifact.network.organization_name!=\"\", graph.entity.ip_geo_artifact.network.organization_name, \"-\")\r\n$time = timestamp.get_timestamp(graph.metadata.collected_timestamp.seconds, \"%Y-%m-%d %H:%M:%S\")\r\n$bussiness_found = strings.to_upper(graph.additional.fields[\"business_service_found\"])\r\n$trust = if(graph.metadata.threat.detection_fields[\"business_service_trust_level\"] !=\"\", graph.metadata.threat.detection_fields[\"business_service_trust_level\"], \"-\")\r\n$actor= strings.to_upper(graph.additional.fields[\"internet_scanner_actor\"])\r\n$asn = if(graph.entity.ip_geo_artifact.network.asn!=\"\",graph.entity.ip_geo_artifact.network.asn, \"-\")\r\nmatch:\r\n    $ip, $threat_verdict, $summary, $greynoise_link, $bussiness_found, $source_country, $organization, $trust, $actor, $asn, $bot, $tor, $vpn_Service\r\noutcome:\r\n    $all_cves = re.replace((arrays.join_string(array_distinct(if(graph.entity.asset.vulnerabilities.cve_id!=\"\", graph.entity.asset.vulnerabilities.cve_id, \"-\")),\", \")), \"(, -)|(-, )\",\"\")\r\n    $last_seen = window.last(graph.metadata.collected_timestamp.seconds, $time)\r\norder:\r\n    $last_seen desc\r\nlimit:\r\n    10000\r\n",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "f1391cb9850b0794932d9a09dc6d3c66fbafd2a0ba0d6b8af2913ed21b63e1bf"
+                },
+                {
+                    "name": "773c77f7-537f-4745-a994-0440ca5803e0",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.threat.threat_verdict = \"UNDETECTED\"\r\n$entityid = graph.metadata.product_entity_id\r\noutcome:\r\n    $benign_count = count_distinct($entityid)",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "23f97689e51110f4ddc82750a2eb0273295e513e2f65fb9f6a851275a7181c95"
+                },
+                {
+                    "name": "2cfa89eb-7f5f-4540-a24d-caeea9fec7d8",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\n$category = graph.metadata.threat.category_details\r\ngraph.additional.fields[\"business_service_found\"] = \"true\"\r\n$category != \"\" \r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $category\r\noutcome:\r\n    $count = count_distinct($entityid)\r\norder:\r\n    $count desc\r\nlimit:\r\n    10",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "affbdf8cb3ebb95b49a67ec0c89253fd1daaf482f2b5fc408f3f02ea6483b0f4"
+                },
+                {
+                    "name": "c6912a37-acbb-45ae-a3ef-5349a0845087",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.threat.threat_verdict = \"MALICIOUS\"\r\n$entityid = graph.metadata.product_entity_id\r\noutcome:\r\n    $malicious_count = count_distinct($entityid)",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "ec38cee87104133385a441207621d88f2855b8e20de7e001c72d00ed8883ef7e"
+                },
+                {
+                    "name": "c4a631e7-f3ff-4c88-8b5f-ff4fed096596",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\n$category = graph.additional.fields[\"network_category\"]\r\n$category != \"\" \r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $category\r\noutcome:\r\n    $count = count_distinct($entityid)\r\norder:\r\n    $count desc\r\nlimit:\r\n    10",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "caba04c4f9ba2b40d7b8204a3fb3f10732c62b221da2a4f17a850f773c9fa3f0"
+                },
+                {
+                    "name": "07e73d0e-eb68-45b5-a234-066e4954e241",
+                    "query": "graph.metadata.vendor_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.product_name = \"GreyNoise Intelligence\"\r\ngraph.metadata.threat.threat_verdict = \"THREAT_VERDICT_UNSPECIFIED\"\r\n$entityid = graph.metadata.product_entity_id\r\noutcome:\r\n    $unknown_count = count_distinct($entityid)",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "23d629656cd9cc46688dbefda8da416b8801334dfda14a2416ce3aabba71c0d4"
+                }
+            ]
+        }
+    ]
+}

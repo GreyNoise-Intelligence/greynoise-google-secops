@@ -1,0 +1,4 @@
+graph.metadata.vendor_name = "GreyNoise Intelligence"
+graph.metadata.product_name = "GreyNoise Intelligence"
+graph.entity.ip = /.*/
+graph.additional.fields["business_service_found"] = /.*/ nocase

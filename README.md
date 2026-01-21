@@ -26,7 +26,17 @@ threat intelligence visualization, investigation, and automated response.
 
 ## SOAR Integration
 
-*SOAR integration content coming soon.*
+### Repository Contents
+
+| Component           | Description                                               | Path                                                                                 |
+| ------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| **Playbooks**       | Automated response playbooks and reusable blocks          | [`Google SecOps SOAR/Playbooks/`](./Google%20SecOps%20SOAR/Playbooks/)             |
+| **Webhooks**        | Webhook configurations for alerts and feeds ingestion     | [`Google SecOps SOAR/Webhooks/`](./Google%20SecOps%20SOAR/Webhooks/)               |
+
+> 📖 For detailed SOAR Integration Information, see:
+>
+> - [Playbooks Documentation](./Google%20SecOps%20SOAR/Playbooks/README.md)
+> - [Webhooks Documentation](./Google%20SecOps%20SOAR/Webhooks/README.md)
 
 ---
 
@@ -42,9 +52,9 @@ see the [tags on this repository](https://github.com/GreyNoise-Intelligence/grey
 
 ## Links
 
-* [GreyNoise.io](https://greynoise.io)
-* [GreyNoise Terms](https://greynoise.io/terms)
-* [GreyNoise Developer Portal](https://docs.greynoise.io)
+- [GreyNoise.io](https://greynoise.io)
+- [GreyNoise Terms](https://greynoise.io/terms)
+- [GreyNoise Developer Portal](https://docs.greynoise.io)
 
 ## Contact Us
 

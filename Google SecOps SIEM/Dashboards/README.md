@@ -134,7 +134,7 @@ The Indicator Dashboard provides detailed information about indicators fetched f
 
 ![Indicators by Classification](./Screenshots/Indicator%20Dashboard/Indicators%20by%20Classification.png)
 
-**Description:** Distribution of indicators by classification (malicious, suspicious, benign, unknown).
+**Description:** Distribution of indicators by Threat Verdict Unspecified, Malicious, Suspicious & Undetected.
 
 **Visualization Type:** Pie Chart
 

@@ -4,11 +4,12 @@ This repository contains sample playbooks that use the **GreyNoise** integration
 
 These automated playbooks can be used as a reference to generate a custom workflow to fulfill your needs.
 
+
 ## Import Playbooks
 
 Importing a playbook into any SecOps instance is straightforward:
 
-- To import all GreyNoise Playbooks and Blocks, you can download the [All Playbook Bundle](<./GreyNoise - All Sample Playbooks & Blocks.zip>). Alternatively, you can selectively import specific playbooks and blocks by downloading them individually from the [Playbooks](#playbooks) and [Blocks](#blocks) sections.
+- To import all GreyNoise Playbooks and Blocks, you can download the [All Playbook Bundle](<./GreyNoise - All Sample Playbooks & Blocks.zip>). Alternatively, you can selectively import specific playbooks and blocks by downloading them individually from the [Playbooks](#playbooks) and [Blocks](#blocks) sections. 
 
 - Open the SecOps instance. From the sidebar, navigate to **Response > Playbooks** section.
     ![Sidebar - Playbooks](<./screenshots/Playbook Section.png>)
@@ -23,7 +24,6 @@ The playbooks stored in the file would be imported. We can access these under th
 **Important:** Before using any playbook with an alert, review its default settings (triggers, action parameters, etc.) to ensure they align with your needs.
 
 ---
-
 ## Prerequisites
 
 Apart from GreyNoise the following additional integrations and Power Ups must be configured in your Google SecOps SOAR instance before using these playbooks:
@@ -34,13 +34,12 @@ Apart from GreyNoise the following additional integrations and Power Ups must be
 - **[Siemplify](https://docs.cloud.google.com/chronicle/docs/soar/marketplace-integrations/siemplify)** - Built-in tools for case management, entity creation, and workflow control
 
 **Installation Steps:**
-
 1. Navigate to **Content Hub > Response Integrations** in your SecOps instance
 2. Search for the integration name (e.g. "Zscaler")
 3. Click **Install** and follow the configuration wizard
 4. [Configure the integration](https://docs.cloud.google.com/chronicle/docs/soar/respond/integrations-setup/supporting-multiple-instances#configure-an-instance) instance with required credentials/settings
 
-For detailed instructions: [Install an Integration](https://docs.cloud.google.com/chronicle/docs/soar/respond/integrations-setup/configure-integrations#install-an-integration)
+For detailed instructions: [Install an Integration](https://docs.cloud.google.com/chronicle/docs/soar/respond/integrations-setup/configure-integrations#install-an-integration) | [Configure Integration Instances](https://docs.cloud.google.com/chronicle/docs/soar/respond/integrations-setup/supporting-multiple-instances#configure-an-instance)
 
 ### **Power Ups** (Install from Content Hub > Power Ups)
 
@@ -48,14 +47,12 @@ For detailed instructions: [Install an Integration](https://docs.cloud.google.co
 - **[Tools](https://docs.cloud.google.com/chronicle/docs/soar/marketplace/power-ups/tools)** - A set of utility actions for data manipulation to power up playbook capabilities (Change Case Name, Attach Playbook, etc.)
 
 **Installation Steps:**
-
 1. Navigate to **Content Hub > Power Ups** in your SecOps instance
 2. Search for "Functions" and "Tools"
 3. Click **Install** for each Power Up
-4. [Configure the Power Ups](https://docs.cloud.google.com/chronicle/docs/soar/respond/integrations-setup/supporting-multiple-instances#configure-an-instance) instance (No credentials required)
+4. Configure the Power Ups instance (No credentials required)
 
 ---
-
 ## Documentation
 
 - [Playbooks](#playbooks)
@@ -65,9 +62,7 @@ For detailed instructions: [Install an Integration](https://docs.cloud.google.co
   - [CVE-Based Network Containment Orchestrator](#cve-based-network-containment-orchestrator)
 - [Blocks](#blocks)
   - [Network Containment Block](#network-containment-block)
-
 ---
-
 ## Playbooks
 
 Playbooks are a feature in Google Security Operations (SecOps) that can be used to automatically perform actions on alerts/cases when triggered. Playbooks can be used to: Retrieve information about alerts, Remediate threats, Create tickets, and Manage toxic combinations and IAM recommendations.
@@ -80,7 +75,9 @@ Playbooks are a feature in Google Security Operations (SecOps) that can be used 
 - You can move playbooks to a specific folder or duplicate them to your specific environment as needed
 - Review and update trigger conditions to match your environment's alert sources
 - Verify all integration instances referenced in playbook actions are available in your environment
+- Users can change the priority of the playbook as per the requirements. ([Reference](https://docs.cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/attaching-playbooks-to-an-alert))
 - Test playbooks in Simulator mode before enabling it for use
+
 
 ### Noise Elimination
 
@@ -89,7 +86,6 @@ This playbook updates the priority level of an Alert based on GreyNoise reputati
 ![Playbook - Noise Elimination](<./screenshots/playbooks/Noise Elimination.png>)
 
 **Trigger**:
-
 - This playbook is triggered on alerts containing **ADDRESS** type entities (IP addresses).
 
 **Flow**:
@@ -123,7 +119,6 @@ This playbook blocks or unblocks IP on Firewall based on the GreyNoise IP feed i
 ![Playbook - Network Containment Based on GreyNoise IP Feed](<./screenshots/playbooks/Network Containment Based on GreyNoise IP Feed.png>)
 
 **Trigger**:
-
 - This playbook is triggered on alerts where `Event.event_type` equals **"IP Classification Change"** or **"ip-classification-change"** (ingested by the GreyNoise Webhook Connector).
 
 **Flow**:
@@ -133,7 +128,7 @@ This playbook blocks or unblocks IP on Firewall based on the GreyNoise IP feed i
 
 - Evaluate IP Classification (condition)
   - This condition evaluates the IP classification status (`Event.new_state.classification` or `Event.new_state`) from the GreyNoise feed to determine whether to block or unblock the IP address.
-  - **Branches**:
+  - **Branches**: 
     - **Malicious or Suspicious**: Routes to blacklist action
     - **Benign**: Routes to whitelist action
     - **Default**: No action
@@ -153,8 +148,7 @@ This playbook dynamically renames cases based on alert/event data received via G
 ![Playbook - Dynamic Case Naming from Webhook](<./screenshots/playbooks/Dynamic Case Naming from Webhook.png>)
 
 **Trigger**:
-
-- This playbook is triggered on alerts where `Alert.Product` equals **"GreyNoise-Alert"** or **"GreyNoise-Feed"** (ingested by the GreyNoise Webhook Connector).
+- This playbook is triggered on alerts where `Alert.Product` equals **"GreyNoise-Alert"** or **"GreyNoise-Feed"** (ingested by the GreyNoise Webhook Connector). 
 
 **Note:** To enable automatic playbook attachment, ensure the `DeviceProduct` field is correctly mapped during webhook configuration as described in the [Webhook Setup Guide](<../Webhooks/README.md>).
 
@@ -192,12 +186,11 @@ This playbook orchestrates automated network containment by iterating through CV
 ![Playbook - CVE-Based Network Containment Orchestrator](<./screenshots/playbooks/CVE-Based Network Containment Orchestrator.png>)
 
 **Trigger**:
-
 - This playbook is triggered on alerts containing **CVE** type entities.
 
 **Use Case**:
 
-This playbook orchestrates automated network containment by iterating through CVE entities in alerts and invoking the Network Containment Block for each CVE. It queries GreyNoise for malicious IPs associated with CVEs and triggers containment actions via integrated security tools like Zscaler or Fortigate.
+This playbook orchestrates automated network containment by iterating through CVE entities in alerts and invoking the Network Containment Block for each CVE. It **queries** GreyNoise for malicious IPs associated with CVEs and triggers containment actions via integrated security tools like Zscaler or Fortigate.
 
 **Flow**:
 
@@ -205,8 +198,8 @@ This playbook orchestrates automated network containment by iterating through CV
   - This action iterates through all CVE entities present in the alert to process each CVE identifier individually.
 
 - [Network Containment Block](#network-containment-block) (block)
-  - This block is invoked for each CVE entity to query GreyNoise and block associated malicious IPs.
-  
+  - This block is invoked for each CVE entity to query GreyNoise and block associated malicious IPs [here](#network-containment-block).
+
 **Note:** This playbook wraps the Network Containment Block functionality into an automated orchestrator that processes multiple CVE entities in a single alert, eliminating the need for manual block attachment.
 
 ---
@@ -217,18 +210,18 @@ This playbook orchestrates automated network containment by iterating through CV
 
 This reusable block automates the process of identifying and blocking malicious IP addresses associated with specific CVEs using GreyNoise intelligence. [Download](<./Network Containment Block - GreyNoise.zip>)
 
-### Use Case
+**Use Case**
 
 This block retrieves IP addresses from GreyNoise associated with a specific CVE. To narrow down the query, it allows filtering based on GreyNoise IP classification and last seen date, and also allows the user to limit the total result count to fit in the limitations of some firewalls. The identified IPs are then automatically blocked using the configured firewall or security device (such as Zscaler).
 
-### Inputs
+**Inputs**
 
 - **Enter a CVE Identifier** - The CVE identifier to query (e.g., CVE-2021-27320). This is the vulnerability identifier for which you want to find associated malicious IPs.
 - **Maximum IP Count** - Maximum number of IP addresses to retrieve (e.g., 100). This helps limit the result set to fit firewall capacity constraints.
 - **Time Filter** - Time-based filter for last seen activity (e.g., last_seen:1d). This narrows results to recently active IPs.
 - **Classification Filter** - GreyNoise classification filter (e.g., (classification:malicious OR classification:suspicious)). This filters IPs based on their threat classification.
 
-### Flow
+**Flow**
 
 - **GreyNoise - Execute GNQL Query (action)**
   - This action executes a GNQL query against the GreyNoise API to retrieve malicious IPs associated with the specified CVE identifier using the classification and time filters provided.
@@ -253,7 +246,6 @@ This block retrieves IP addresses from GreyNoise associated with a specific CVE.
 In case of any failures when running any playbook, we can debug the same by running the playbook in the Simulator Mode. For more details, please refer to this guide: [Google SecOps playbooks - Simulator](https://cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/working-with-playbook-simulator).
 
 ---
-
 ## References
 
 - [GreyNoise Documentation](https://docs.greynoise.io/)

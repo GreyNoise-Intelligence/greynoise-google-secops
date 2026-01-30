@@ -80,6 +80,7 @@ Playbooks are a feature in Google Security Operations (SecOps) that can be used 
 - You can move playbooks to a specific folder or duplicate them to your specific environment as needed
 - Review and update trigger conditions to match your environment's alert sources
 - Verify all integration instances referenced in playbook actions are available in your environment
+- Users can change the priority of the playbook as per the requirements. ([Reference](https://docs.cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/attaching-playbooks-to-an-alert))
 - Test playbooks in Simulator mode before enabling it for use
 
 ### Noise Elimination

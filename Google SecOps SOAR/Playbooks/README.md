@@ -175,9 +175,9 @@ This playbook dynamically renames cases based on alert/event data received via G
 
 - Tools - Change Case Name (action)
   - This action dynamically updates the case name using values extracted from alert/event fields to provide meaningful case identification. Three different naming formats are applied:
-    - **IP Alert Format:** `[Product]: [EventName] IP [ip] [classification]`
-    - **CVE Activity Format:** `[Product]: [EventName] [cve] new activity - [activity_seen]`
-    - **IP State Change Format:** `[Product]: [EventName] IP [ip] [new_state] Detected`
+    - **IP Alert Format:** `[Product]: [EventName] - [ip] with [classification] Classification`
+    - **CVE Activity Format:** `[Product]: [EventName] - [CVE] Updated`
+    - **IP State Change Format:** `[Product]: [EventName] - [ip] Classification Changed to [classification]`
 
 - Tools - Attach Playbook (action)
   - This action attaches the "[GreyNoise - Noise Elimination](#noise-elimination)" playbook to automatically enrich and analyze entities in the alert for threat intelligence assessment.

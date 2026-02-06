@@ -84,7 +84,7 @@ Enable ingestion of GreyNoise Alert data into Google SecOps SOAR using webhooks.
 
 | Field | Mapping Value | Value Type | Description |
 |-------|---------------|------------|-------------|
-| **TicketID** | `alert.id` | Dynamic | Unique identifier for the alert |
+| **TicketID** | `timestamp` | Dynamic | Unique identifier for the alert |
 | **SourceSystemName** | `GreyNoise` | Static | Identifies the source system |
 | **Name** | `alert.name` | Dynamic | Name of the alert |
 | **DeviceVendor** | `GreyNoise` | Static | Vendor information |
@@ -213,7 +213,7 @@ Enable ingestion of GreyNoise feed data (IPs and CVEs) into Google SecOps SOAR t
 
 | Field | Mapping Value | Value Type | Description |
 |-------|---------------|------------|-------------|
-| **TicketID** | `cve` | Dynamic | Unique identifier for the CVE event |
+| **TicketID** | `timestamp` | Dynamic | Unique identifier for the CVE event |
 | **SourceSystemName** | `GreyNoise` | Static | Identifies the source system |
 | **Name** | `event_type` | Dynamic | Type of CVE event |
 | **DeviceVendor** | `GreyNoise` | Static | Vendor information |
@@ -293,7 +293,7 @@ Enable ingestion of GreyNoise feed data (IPs and CVEs) into Google SecOps SOAR t
 
 | Field | Mapping Value | Value Type | Description |
 |-------|---------------|------------|-------------|
-| **TicketID** | `ip` | Dynamic | Unique identifier for the IP event |
+| **TicketID** | `timestamp` | Dynamic | Unique identifier for the IP event |
 | **SourceSystemName** | `GreyNoise` | Static | Identifies the source system |
 | **Name** | `event_type` | Dynamic | Type of IP event |
 | **DeviceVendor** | `GreyNoise` | Static | Vendor information |

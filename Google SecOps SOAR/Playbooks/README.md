@@ -80,6 +80,7 @@ Playbooks are a feature in Google Security Operations (SecOps) that can be used 
 - You can move playbooks to a specific folder or duplicate them to your specific environment as needed
 - Review and update trigger conditions to match your environment's alert sources
 - Verify all integration instances referenced in playbook actions are available in your environment
+- Users can change the priority of the playbook as per the requirements. ([Reference](https://docs.cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/attaching-playbooks-to-an-alert))
 - Test playbooks in Simulator mode before enabling it for use
 
 ### Noise Elimination
@@ -174,9 +175,9 @@ This playbook dynamically renames cases based on alert/event data received via G
 
 - Tools - Change Case Name (action)
   - This action dynamically updates the case name using values extracted from alert/event fields to provide meaningful case identification. Three different naming formats are applied:
-    - **IP Alert Format:** `[Product]: [EventName] IP [ip] [classification]`
-    - **CVE Activity Format:** `[Product]: [EventName] [cve] new activity - [activity_seen]`
-    - **IP State Change Format:** `[Product]: [EventName] IP [ip] [new_state] Detected`
+    - **IP Alert Format:** `[Product]: [EventName] - [ip] with [classification] Classification`
+    - **CVE Activity Format:** `[Product]: [EventName] - [CVE] Updated`
+    - **IP State Change Format:** `[Product]: [EventName] - [ip] Classification Changed to [classification]`
 
 - Tools - Attach Playbook (action)
   - This action attaches the "[GreyNoise - Noise Elimination](#noise-elimination)" playbook to automatically enrich and analyze entities in the alert for threat intelligence assessment.

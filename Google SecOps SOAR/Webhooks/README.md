@@ -328,6 +328,7 @@ Enable ingestion of GreyNoise feed data (IPs and CVEs) into Google SecOps SOAR t
   "vendor": "acme"
 }
 ```
+
 ##### Tag Spike
 
 ```json

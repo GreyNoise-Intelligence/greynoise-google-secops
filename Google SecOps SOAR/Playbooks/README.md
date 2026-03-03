@@ -161,7 +161,7 @@ This playbook dynamically renames cases based on alert/event data received via G
 
 **Use Case**:
 
-This playbook dynamically renames cases based on alert/event data received via GreyNoise webhook to overcome webhook naming limitations. It evaluates the alert type (IP Alert, CVE Change, or IP Classification Change) and applies the appropriate case naming format. Optionally attaches the Noise Elimination playbook to the alert for automated threat analysis and response workflows.
+This playbook dynamically renames cases based on alert/event data received via GreyNoise webhook to overcome webhook naming limitations. It evaluates the alert type (IP Alert, CVE Status Change, IP Classification Change, or CVE/Vendor/Tag Spike Event Type) and applies the appropriate case naming format. Optionally attaches the Noise Elimination playbook to the alert for automated threat analysis and response workflows.
 
 **Flow**:
 
@@ -169,15 +169,21 @@ This playbook dynamically renames cases based on alert/event data received via G
   - This condition evaluates the alert source and available event data to determine the appropriate case naming pattern.
   - **Branches**:
     - **GreyNoise Alerts**: When `Alert.Product` equals "GreyNoise-Alert"
-    - **GreyNoise Feed CVE Change**: When `Event.cve` is not empty
     - **GreyNoise Feed IP Classification Change**: When `Event.ip` is not empty
+    - **GreyNoise Feed Vendor CVE Spike Event Type**: When `Event.event_type` equals to "vendor-cve-spike"
+    - **GreyNoise Feed Tag Spike Event Type**: When `Event.event_type` equals to "tag-spike"
+    - **GreyNoise Feed CVE Activity Spike Event Type**: When `Event.event_type` equals to "cve-activity-spike"
+    - **GreyNoise Feed CVE Status Change**: When `Event.cve` is not empty
     - **Default**: Fallback branch
 
 - Tools - Change Case Name (action)
   - This action dynamically updates the case name using values extracted from alert/event fields to provide meaningful case identification. Three different naming formats are applied:
     - **IP Alert Format:** `[Product]: [EventName] - [ip] with [classification] Classification`
-    - **CVE Activity Format:** `[Product]: [EventName] - [CVE] Updated`
+    - **CVE Status Change Format:** `[Alert.Product]: [Alert.EventName] for '[Event.cve]'`
     - **IP State Change Format:** `[Product]: [EventName] - [ip] Classification Changed to [classification]`
+    - **Vendor CVE Spike Event Type Format:** `[Alert.Product]: [Alert.EventName] detected for '[Event.vendor]' - '[Event.cve]'`
+    - **Tag Spike Event Type Format:** `[Alert.Product]: [Alert.EventName] detected for '[Event.tag]'`
+    - **CVE Activity Spike Event Type Format:** `[Alert.Product]: [Alert.EventName] detected for '[Event.cve]'`
 
 - Tools - Attach Playbook (action)
   - This action attaches the "[GreyNoise - Noise Elimination](#noise-elimination)" playbook to automatically enrich and analyze entities in the alert for threat intelligence assessment.

@@ -12,7 +12,7 @@ To ingest Alerts and Feed data, you need to create **3 webhooks** to support dif
 |--------------|---------|-------------------|
 | **GreyNoise Alert Webhook** | Ingests all alert types | IP Alerts, CVE Alerts, TAG Alerts, GNQL Query Alerts |
 | **GreyNoise IP Change Webhook** | Tracks IP classification changes | IP Classification Change Feed |
-| **GreyNoise CVE Change Webhook** | Tracks CVE activity | CVE Spike Activity, CVE Status Change Feed |
+| **GreyNoise CVE Change or Vendor/Tag Event Type Webhook** | Tracks CVE activity and Vendor/Tag Event Type | CVE Activity Spike, CVE Status Change, Vendor CVE Spike, Tag Spike Feed |
 
 > **Note:** Configure the webhooks relevant to your use case based on your requirements.
 
@@ -203,11 +203,11 @@ Enable ingestion of GreyNoise feed data (IPs and CVEs) into Google SecOps SOAR t
 > **Note:** You need to create **two separate webhooks**:
 >
 > 1. **IP Classification Change Webhook**
-> 2. **CVE Change Webhook** (for CVE Spike Activity and CVE Status Change)
+> 2. **CVE Change or Vendor/Tag Event Type Webhook** (for CVE Activity Spike, CVE Status Change, Vendor CVE Spike and Tag Spike)
 
 ---
 
-### Webhook 1: CVE Status Change and CVE Activity Spike
+### Webhook 1: CVE Status Change, CVE Activity Spike, Vendor CVE Spike and Tag Spike
 
 #### Field Mapping
 
@@ -261,27 +261,106 @@ Enable ingestion of GreyNoise feed data (IPs and CVEs) into Google SecOps SOAR t
 ```json
 {
   "event_type": "cve-activity-spike",
-  "cve": "CVE-2020-15505",
-  "old_state": {
-    "activity_seen": true,
-    "benign_ip_count_10d": 0,
-    "benign_ip_count_1d": 0,
-    "benign_ip_count_30d": 0,
-    "threat_ip_count_10d": 25,
-    "threat_ip_count_1d": 6,
-    "threat_ip_count_30d": 47
+  "cve": "CVE-2025-66478",
+  "workspace_id": "289ff251-c358-4fba-ab43-4fe99956b98b",
+  "timestamp": "2026-02-20T13:37:04.642722035Z",
+  "observation_uuid": "a3f9c2e1-7b64-4a8d-9f2e-3c1b7d8e5f90",
+  "observation_type": "CveSpike",
+  "criterion": {
+    "field": "cve",
+    "value_filter": "",
+    "interval": "hour",
+    "lookback_intervals": 1,
+    "analysis_intervals": 1,
+    "pct_change_threshold": 50,
+    "ip_count_threshold": 10,
+    "workspace_id": "e4a5be2e-1be0-4105-a5e2-51e6a5525fa0"
   },
-  "new_state": {
-    "activity_seen": true,
-    "benign_ip_count_10d": 0,
-    "benign_ip_count_1d": 0,
-    "benign_ip_count_30d": 0,
-    "threat_ip_count_10d": 29,
-    "threat_ip_count_1d": 10,
-    "threat_ip_count_30d": 51
+  "baseline_counts": {
+    "total_ip_count": 18,
+    "benign_ip_count": 0,
+    "threat_ip_count": 18
   },
-  "timestamp": "2025-09-29T17:30:27.161824826Z",
-  "metadata": {}
+  "analysis_counts": {
+    "total_ip_count": 29,
+    "benign_ip_count": 0,
+    "threat_ip_count": 29
+  },
+  "delta_total_ip_count": {
+    "absolute": 11,
+    "percentage": 61.11
+  }
+}
+```
+
+##### Vendor CVE Spike
+
+```json
+{
+  "analysis_counts": {
+    "benign_ip_count": 90,
+    "threat_ip_count": 90,
+    "total_ip_count": 180
+  },
+  "baseline_counts": {
+    "benign_ip_count": 40,
+    "threat_ip_count": 40,
+    "total_ip_count": 80
+  },
+  "criterion": {
+    "analysis_intervals": 1,
+    "field": "vendor",
+    "interval": "hour",
+    "ip_count_threshold": 10,
+    "lookback_intervals": 24,
+    "pct_change_threshold": 50,
+    "value_filter": "acme",
+    "workspace_id": "e4a5be2e-1be0-4105-a5e2-51e6a5525fa0"
+  },
+  "cve": "CVE-2024-3400",
+  "delta_total_ip_count": {
+    "absolute": 100,
+    "percentage": 125
+  },
+  "event_type": "vendor-cve-spike",
+  "observation_uuid": "a3f9c2e1-7b64-4a8d-9f2e-3c1b7d8e5f90",
+  "timestamp": "2026-02-20T13:41:19.186515684Z",
+  "vendor": "acme"
+}
+```
+
+##### Tag Spike
+
+```json
+{
+  "analysis_counts": {
+    "benign_ip_count": 160,
+    "threat_ip_count": 90,
+    "total_ip_count": 250
+  },
+  "baseline_counts": {
+    "benign_ip_count": 80,
+    "threat_ip_count": 40,
+    "total_ip_count": 120
+  },
+  "criterion": {
+    "analysis_intervals": 1,
+    "field": "tag",
+    "interval": "hour",
+    "ip_count_threshold": 10,
+    "lookback_intervals": 2,
+    "pct_change_threshold": 50,
+    "value_filter": "mirai",
+    "workspace_id": "e4a5be2e-1be0-4105-a5e2-51e6a5525fa0"
+  },
+  "delta_total_ip_count": {
+    "absolute": 130,
+    "percentage": 108.33
+  },
+  "event_type": "tag-spike",
+  "observation_uuid": "a3f9c2e1-7b64-4a8d-9f2e-3c1b7d8e5f90",
+  "tag": "mirai",
+  "timestamp": "2026-02-20T13:41:07.25004179Z"
 }
 ```
 

@@ -5,8 +5,8 @@
 # GreyNoise Intelligence - Google SecOps Integration
 
 This repository contains the Google SecOps components for the GreyNoise Intelligence integration,
-including SIEM dashboards, saved searches, detection rules, and SOAR playbooks for comprehensive
-threat intelligence visualization, investigation, and automated response.
+including SIEM dashboards, saved searches, detection rules, and SOAR webhooks for comprehensive
+threat intelligence visualization and investigation.
 
 ---
 
@@ -30,13 +30,9 @@ threat intelligence visualization, investigation, and automated response.
 
 | Component           | Description                                               | Path                                                                                 |
 | ------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| **Playbooks**       | Automated response playbooks and reusable blocks          | [`Google SecOps SOAR/Playbooks/`](./Google%20SecOps%20SOAR/Playbooks/)             |
 | **Webhooks**        | Webhook configurations for alerts and feeds ingestion     | [`Google SecOps SOAR/Webhooks/`](./Google%20SecOps%20SOAR/Webhooks/)               |
 
-> 📖 For detailed SOAR Integration Information, see:
->
-> - [Playbooks Documentation](./Google%20SecOps%20SOAR/Playbooks/README.md)
-> - [Webhooks Documentation](./Google%20SecOps%20SOAR/Webhooks/README.md)
+> 📖 For detailed SOAR Integration Information, see: [Webhooks Documentation](./Google%20SecOps%20SOAR/Webhooks/README.md).
 
 ---
 
